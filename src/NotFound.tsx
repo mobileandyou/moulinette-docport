@@ -17,6 +17,11 @@ const useStyles = createStyles((theme) => ({
     root: {
         paddingTop: rem(80),
         paddingBottom: rem(80),
+
+        [theme.fn.smallerThan('sm')]: {
+            paddingTop: rem(30),
+            paddingBottom: rem(30),
+        },
     },
 
     title: {
@@ -56,7 +61,7 @@ export function NotFound() {
 
     return (
         <Container className={classes.root}>
-            <SimpleGrid spacing={80} cols={2} breakpoints={[{ maxWidth: 'sm', cols: 1, spacing: 40 }]}>
+            <SimpleGrid spacing={50} cols={2} breakpoints={[{ maxWidth: 'sm', cols: 1, spacing: 40 }]}>
                 <Image src={image} className={classes.mobileImage} />
                 <div>
                     <Title className={classes.title}>Dossier inconnu</Title>

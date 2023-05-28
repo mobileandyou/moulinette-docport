@@ -1,5 +1,17 @@
 import {useEffect, useState} from 'react';
-import {createStyles, Header, Group, ActionIcon, Container, Burger, rem, Text, Avatar, Popover} from '@mantine/core';
+import {
+    createStyles,
+    Header,
+    Group,
+    ActionIcon,
+    Container,
+    Burger,
+    rem,
+    Text,
+    Avatar,
+    Popover,
+    Anchor
+} from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import {IconInfoCircle, IconLock} from '@tabler/icons-react';
 import {useNavigate} from "react-router-dom";
@@ -100,10 +112,10 @@ export function MyHeader({ links }: HeaderMiddleProps) {
                     {items}
                 </Group>
 
-                <Group align={"center"} spacing={10}>
+                <Anchor style={{textDecoration: "none", color: "black"}} onClick={() => navigation("/")}><Group align={"center"} spacing={10}>
                     <Avatar src={"https://moulinette.eu/img/apple-touch-icon.png"} size={"sm"}/>
                     <Text size={"xl"} fw={"bolder"}>DocPort</Text>
-                </Group>
+                </Group></Anchor>
 
                 <Group spacing={0} className={classes.social} position="right" noWrap>
                     <Popover>

@@ -10,8 +10,8 @@ const useStyles = createStyles((theme) => ({
         paddingBottom: rem(40),
 
         [theme.fn.smallerThan('sm')]: {
-            paddingTop: rem(20),
-            paddingBottom: rem(0),
+            paddingTop: rem(40),
+            paddingBottom: rem(20),
         },
     },
 

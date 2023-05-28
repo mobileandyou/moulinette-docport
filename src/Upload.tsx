@@ -97,6 +97,7 @@ export default function Upload({data, setData}: UploadProps) {
                 </tr>
                 </thead>
                 <tbody>
+                {data?.files.length === 0 && <tr><td colSpan={2}><Text size={"sm"}>Aucun fichier</Text></td></tr>}
                 {data?.files.map((file: any) => (
                     <tr>
                         <td><Text size={"sm"}>{file.name}</Text></td>
