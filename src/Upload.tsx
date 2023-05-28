@@ -27,7 +27,6 @@ export default function Upload({data, setData}: UploadProps) {
             icon: <IconSend size={18}/>,
             title: "Téléportation en cours",
             message: "Vos fichiers sont en cours de traitement",
-            autoClose: 5000,
             loading: true,
             color: "red"
         })
@@ -38,6 +37,10 @@ export default function Upload({data, setData}: UploadProps) {
         })
             .then(response => {
                 if (response.ok) {
+                    response.json().then(json => {
+                        setData(json);
+                        setFiles([]);
+                    });
                     updateNotification({
                         id: "loading",
                         icon: <IconSend size={18}/>,
@@ -46,9 +49,6 @@ export default function Upload({data, setData}: UploadProps) {
                         autoClose: 5000,
                         color: "red"
                     })
-                    response.json().then(json => {
-                        setData(json);
-                    });
                 } else {
                     // get json
                     response.json().then(json => {
@@ -80,6 +80,7 @@ export default function Upload({data, setData}: UploadProps) {
                 required
                 accept="image/*,video/*,audio/*,application/pdf"
                 icon={<IconUpload size={15}/>}
+                value={files}
                 placeholder={"Sélectionnez vos fichiers"}
                 onChange={(files) => setFiles(files)}
                 />

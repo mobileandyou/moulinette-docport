@@ -11,9 +11,9 @@ export default function Single() {
     const [docPort, setDocPort] = useState<any>(null);
     const [loading, setLoading] = useState(true);
 
-    async function getDocPort() {
-        setLoading(true);
-        fetch("https://api.moulinette.eu/utils/docport/" + id + "?share=false")
+    async function getDocPort(silent?: boolean) {
+        if(!silent) setLoading(true);
+        fetch("https://api.moulinette.eu/utils/docport/" + id)
             .then(response => response.json())
             .then(data => {
                 if (data.message) {
@@ -31,6 +31,13 @@ export default function Single() {
 
     useEffect(() => {
         getDocPort();
+
+        // every 5 seconds
+        const interval = setInterval(() => {
+            getDocPort(true);
+        }, 5000);
+
+        return () => clearInterval(interval);
     }, []);
 
     return (

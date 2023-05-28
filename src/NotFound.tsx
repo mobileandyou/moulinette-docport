@@ -76,7 +76,7 @@ export function NotFound() {
                             value={value}
                             onChange={(event) => setValue(event.currentTarget.value)}
                             />
-                        <Button variant="outline" size="md"  className={classes.control} onClick={() => window.open("/" + value)}>
+                        <Button variant="outline" size="md"  className={classes.control} onClick={() => window.location.replace("/" + value)}>
                             <IconLockOpen/>
                         </Button>
                     </Group>
