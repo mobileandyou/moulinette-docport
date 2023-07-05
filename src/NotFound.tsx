@@ -11,7 +11,6 @@ import {
 import image from './404.svg';
 import {IconLockAccess, IconLockOpen, IconSearch} from "@tabler/icons-react";
 import {useState} from "react";
-import {useNavigate} from "react-router-dom";
 
 const useStyles = createStyles((theme) => ({
     root: {
@@ -57,7 +56,6 @@ const useStyles = createStyles((theme) => ({
 export function NotFound() {
     const { classes } = useStyles();
     const [value, setValue] = useState('');
-    const navigate = useNavigate();
 
     return (
         <Container className={classes.root}>
