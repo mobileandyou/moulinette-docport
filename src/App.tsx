@@ -1,38 +1,45 @@
-import {AppShell, MantineProvider,} from '@mantine/core';
+import "@mantine/core/styles.css";
+import {AppShell, MantineProvider} from "@mantine/core";
+import {theme} from "./theme";
+import {Outlet, useParams,} from "react-router-dom";
+import '@mantine/notifications/styles.css';
 import {Notifications} from "@mantine/notifications";
-import {MyHeader} from "./MyHeader";
-
-import {Outlet, useParams} from "react-router-dom";
-import {MyFooter} from "./MyFooter";
+import {MyHeader} from "./components/shell/MyHeader.tsx";
+import {MyFooter} from "./components/shell/MyFooter.tsx";
 
 export default function App() {
     const {id} = useParams();
+
     return (
-        <MantineProvider withGlobalStyles withNormalizeCSS
-                         theme={{
-                             primaryColor: 'red',
-                         }}
-        >
+        <MantineProvider theme={theme}>
             <Notifications/>
             <AppShell
-                navbarOffsetBreakpoint="md"
-                fixed
-                footer={<MyFooter/>}
-                header={<MyHeader links={
-                    [
-                        {
-                            link: "/",
-                            label: "Accueil",
-                        },
-                        {
-                            link: "/" + id,
-                            label: "Mon dossier"
-                        }
-                    ]
-                }/>}
+                header={{height: 56}}
+                padding="md"
             >
-                <Outlet/>
+                <AppShell.Header>
+                    <MyHeader links={
+                        [
+                            {
+                                link: "/",
+                                label: "Accueil",
+                            },
+                            {
+                                link: "/" + id,
+                                label: "Mon dossier"
+                            }
+                        ]
+                    }/>
+                </AppShell.Header>
+
+
+                <AppShell.Main>
+                    <Outlet/>
+                    <MyFooter/>
+                </AppShell.Main>
+
             </AppShell>
+
         </MantineProvider>
     );
 }
