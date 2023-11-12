@@ -120,7 +120,7 @@ export default function Teleport({data, setData}: UploadProps) {
 
     }
 
-    const [popover, setPopover] = useState(true);
+
     const [popoverImg, setPopoverImg] = useState<string>("");
 
     // close after 10 seconds
@@ -132,6 +132,8 @@ export default function Teleport({data, setData}: UploadProps) {
         //return url.replace("https://api.moulinette.eu", "http://localhost:8090");
         return url;
     }
+
+    const [popover, setPopover] = useState(largeEnough);
     
     return (
         <>
