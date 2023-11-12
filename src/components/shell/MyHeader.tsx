@@ -93,7 +93,7 @@ export function MyHeader({links}: HeaderMiddleProps) {
 
                 </Group>
             </Container>
-            {infoBanner && <Box className={classes.infoBanner} visibleFrom={"sm"}>
+            {infoBanner && <Box className={classes.infoBanner}>
                 <Text size={"xs"} ta={"center"} fw={"bold"} >
                     {t("banner.safety_message")}:&nbsp;
                     <IconLock size={10}/> <u>docport.moulinette.eu</u>

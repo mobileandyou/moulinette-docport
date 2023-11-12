@@ -227,7 +227,7 @@ export default function Teleport({data, setData}: UploadProps) {
                         <Table.Tr key={file?.name}>
                             <Table.Td>
                                 <Group align={"center"} gap={10}>
-                                    <Popover opened={popoverImg === file?.name} withArrow shadow={"xl"}>
+                                    <Popover opened={popoverImg === file?.name && file.url} withArrow shadow={"xl"}>
                                         <Popover.Dropdown>
                                             <Center>
                                                 {["png", "gif", "jpg", "jpeg"].includes(file?.name?.split(".").pop()) ?
@@ -240,7 +240,7 @@ export default function Teleport({data, setData}: UploadProps) {
                                         </Popover.Dropdown>
                                         <Popover.Target>
                                             {["png", "gif", "jpg", "jpeg"].includes(file?.name?.split(".").pop()) ?<Avatar size={"sm"} radius={"sm"} onMouseEnter={() => setPopoverImg(file?.name)} onMouseLeave={() => setPopoverImg("")}
-                                    src={transformFileUrl(file.url)}/>:
+                                                                                                                           src={transformFileUrl(file.url)}><IconFiles size={15}/></Avatar>:
                                                 <Avatar size={"sm"} radius={"sm"} onMouseEnter={() => setPopoverImg(file?.name)} onMouseLeave={() => setPopoverImg("")}><IconFiles size={15}/></Avatar>}
                                         </Popover.Target>
                                     </Popover>
