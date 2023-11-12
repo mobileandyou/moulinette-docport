@@ -219,7 +219,7 @@ export default function Teleport({data, setData}: UploadProps) {
                 </Table.Thead>
                 <Table.Tbody>
                     {data?.files.length === 0 && <Table.Tr>
-                        <Table.Td colSpan={2}><Text size={"sm"}>{t("docport.no_files")}</Text></Table.Td>
+                        <Table.Td colSpan={2}><Text size={"sm"}>{t("docport.no_file")}</Text></Table.Td>
                     </Table.Tr>}
                     {data?.files.map((file: any) => (
                         <Table.Tr key={file?.name}>
