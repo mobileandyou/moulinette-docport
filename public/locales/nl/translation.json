@@ -1,0 +1,157 @@
+
+{
+  "banner": {
+    "safety_message": "Voor extra veiligheid bij het versturen van uw documenten, zorg ervoor dat u naar de officiële DocPort-website navigeert."
+  },
+  "home": {
+    "features": {
+      "feature1": {
+        "title": "Prestaties",
+        "description": "Door uitsluitend te vertrouwen op moderne technologieën, kunnen we u optimale resultaten bieden."
+      },
+      "feature2": {
+        "title": "Privacy",
+        "description": "Alleen noodzakelijke informatie wordt verzameld, en bestanden worden verwijderd na gebruik of verloop."
+      },
+      "feature3": {
+        "title": "Geen Tussenpersonen",
+        "description": "We betrekken geen tussenpersonen; u staat rechtstreeks in contact met de gebruikte technologieën."
+      },
+      "feature4": {
+        "title": "Veiligheid",
+        "description": "Veiligheid staat centraal in onze zorgen, en we doen er alles aan om u een veilige service te bieden."
+      },
+      "feature5": {
+        "title": "24/7 Ondersteuning",
+        "description": "We zijn hier om te luisteren, uw vragen te beantwoorden en u rond de klok bij uw gebruik te helpen."
+      }
+    },
+    "faq": {
+      "title": "Veelgestelde vragen",
+      "questions": {
+        "q1": {
+          "title": "Waarvoor wordt DocPort gebruikt?",
+          "description": "Deze service stelt u in staat om documenten naar een gedeelde map te uploaden die opnieuw zal worden gebruikt door de Moulinette-service. Dit vergemakkelijkt bijvoorbeeld het maken van foto's en het overbrengen ervan naar het werkstation van de technicus."
+        },
+        "q2": {
+          "title": "Wie kan een map maken?",
+          "description": "Alleen een geautoriseerde Moulinette-gebruiker heeft de mogelijkheid om een map te maken."
+        },
+        "q3": {
+          "title": "Wie kan documenten aan een map toevoegen?",
+          "description": "Iedereen die in het bezit is van de maplink kan documenten toevoegen."
+        },
+        "q4": {
+          "title": "Wie kan toegang krijgen tot de documenten in een map?",
+          "description": "Alleen een geautoriseerde Moulinette-gebruiker heeft de mogelijkheid om de documenten in een map te bekijken."
+        },
+        "q5": {
+          "title": "Wat zijn de beperkingen?",
+          "description": "De beperkingen worden ingesteld door de maker van de betreffende DocPort."
+        }
+      }
+    },
+    "hero": {
+      "cta": {
+        "demo": "Vraag een demo aan"
+      },
+      "title1": "Creëer",
+      "title2": "teleporteer",
+      "title3": "het is gedaan",
+      "description": "Het was tijd om een bestand-deelsysteem te creëren dat werkt voor uw team en uw klanten, eenvoudig en veilig."
+    }
+  },
+  "header": {
+    "home": "Home",
+    "my_folder": "Mijn map"
+  },
+  "general": {
+    "file": "bestand",
+    "megabyte": "MB",
+    "download": "Downloaden",
+    "name": "Naam"
+  },
+  "footer": {
+    "copy": "Alle rechten voorbehouden"
+  },
+  "docport": {
+    "qrcode": {
+      "popover": "U kunt hier klikken en de QR-code scannen om bestanden vanaf uw telefoon naar deze map te sturen.",
+      "title": "QR-code",
+      "description": "Scan deze QR-code met de camera van uw telefoon, Snapchat of een andere QR-code scanner om bestanden naar deze map te sturen."
+    },
+    "file_not_previewable": "Dit bestand is niet beschikbaar voor voorbeeldweergave",
+    "unknown": {
+      "title": "Onbekende map",
+      "description": "De DocPort-map die u probeert te bereiken, bestaat niet, is gebruikt of is verlopen. Controleer de URL of neem contact op met de eigenaar van de map."
+    },
+    "upload": {
+      "started": {
+        "title": "Teleportatie bezig",
+        "description": "Uw bestanden worden geüpload naar uw map"
+      },
+      "success": {
+        "title": "Teleportatie voltooid",
+        "description": "Uw bestanden zijn succesvol geüpload naar uw map"
+      }
+    },
+    "title": "Teleportatie",
+    "description": "Deze pagina stelt u in staat om elk gewenst document op een veilige manier te uploaden naar ",
+    "default_requester": "de aanvragende entiteit",
+    "login_required": "Inloggen vereist",
+    "no_file": "Geen bestand",
+    "files": {
+      "label": "Uw bestanden",
+      "placeholder": "Selecteer uw bestanden",
+      "submit": "Versturen"
+    },
+    "disclaimer": {
+      "part_1": "Deze map is beperkt tot",
+      "part_2": "en",
+      "part_3": "per bestand",
+      "part_4": "Alleen de typen",
+      "part_5": "worden geaccepteerd",
+      "part_6": "De bestanden blijven beschikbaar tot",
+      "part_7": "Door uw bestanden te verzenden, gaat u akkoord met de gebruiksvoorwaarden van DocPort"
+    },
+    "files_already_imported": "Reeds geïmporteerde bestanden",
+    "success": {
+      "message": "Uw bestanden zijn succesvol verzonden",
+      "title": "Succes"
+    }
+  },
+  "api": {
+    "error": {
+      "not_found": {
+        "title": "Onbekende DocPort",
+        "description": "De DocPort-map die u probeert te bereiken, bestaat niet, is gebruikt of is verlopen."
+      },
+      "generic": {
+        "title": "Fout",
+        "description": "Er is een fout opgetreden, probeer het later opnieuw."
+      },
+      "unreachable": {
+        "title": "Fout",
+        "description": "De server is bezet, probeer het later opnieuw."
+      },
+      "upload": {
+        "too_many_files": {
+          "title": "Te veel bestanden",
+          "description": "U kunt niet meer dan {} bestanden uploaden."
+        },
+        "file_too_large": {
+          "title": "Bestand te groot",
+          "description": "Een van uw bestanden is te groot. De maximale grootte is {} MB."
+        },
+        "file_type_not_allowed": {
+          "title": "Bestandstype niet toegestaan",
+          "description": "Het bestandstype {} is niet toegestaan."
+        },
+        "size_limit_reached": {
+          "title": "Grootte limiet bereikt",
+          "description": "De maximale grootte van {} MB is bereikt."
+        }
+      }
+    }
+  }
+}

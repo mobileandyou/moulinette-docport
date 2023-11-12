@@ -1,0 +1,155 @@
+{
+  "banner": {
+    "safety_message": "Per una maggiore sicurezza nell'invio dei tuoi documenti, assicurati di navigare sul sito ufficiale di DocPort"
+  },
+  "home": {
+    "features": {
+      "feature1": {
+        "title": "Prestazioni",
+        "description": "Relying solely on modern technologies, we can offer you optimal results."
+      },
+      "feature2": {
+        "title": "Privacy",
+        "description": "Vengono raccolte solo le informazioni necessarie e i file vengono eliminati dopo il loro utilizzo o scadenza."
+      },
+      "feature3": {
+        "title": "Nessun Intermediario",
+        "description": "Non coinvolgiamo intermediari; sei in contatto diretto con le tecnologie utilizzate."
+      },
+      "feature4": {
+        "title": "Sicurezza",
+        "description": "La sicurezza è al centro delle nostre preoccupazioni e facciamo ogni sforzo per fornirti un servizio sicuro."
+      },
+      "feature5": {
+        "title": "Supporto 24/7",
+        "description": "Siamo qui per ascoltare, rispondere alle tue domande e assisterti nell'uso in qualsiasi momento del giorno e della notte."
+      }
+    },
+    "faq": {
+      "title": "Domande frequenti",
+      "questions": {
+        "q1": {
+          "title": "A cosa serve DocPort?",
+          "description": "Questo servizio ti consente di caricare documenti in una cartella condivisa che verrà riutilizzata dal servizio Moulinette. Ciò facilita notevolmente, ad esempio, la fotografia e il trasferimento al computer del tecnico."
+        },
+        "q2": {
+          "title": "Chi può creare una cartella?",
+          "description": "Solo un utente autorizzato di Moulinette ha la capacità di creare una cartella."
+        },
+        "q3": {
+          "title": "Chi può aggiungere documenti a una cartella?",
+          "description": "Chiunque sia in possesso del link della cartella può aggiungere documenti."
+        },
+        "q4": {
+          "title": "Chi può accedere ai documenti in una cartella?",
+          "description": "Solo un utente autorizzato di Moulinette ha la capacità di visualizzare i documenti in una cartella."
+        },
+        "q5": {
+          "title": "Quali sono le limitazioni?",
+          "description": "Le limitazioni sono stabilite dal creatore del rispettivo DocPort."
+        }
+      }
+    },
+    "hero": {
+      "cta": {
+        "demo": "Richiedi una demo"
+      },
+      "title1": "Crea",
+      "title2": "teletrasporto",
+      "title3": "è fatto",
+      "description": "Era ora di creare un sistema di condivisione file che funzioni per il tuo team e i tuoi clienti, in modo facile e sicuro."
+    }
+  },
+  "header": {
+    "home": "Home",
+    "my_folder": "La mia cartella"
+  },
+  "general": {
+    "file": "file",
+    "megabyte": "MB",
+    "download": "Scarica",
+    "name": "Nome"
+  },
+  "footer": {
+    "copy": "Tutti i diritti riservati"
+  },
+  "docport": {
+    "qrcode": {
+      "popover": "Puoi fare clic qui e scannerizzare il codice QR per inviare file dal tuo telefono a questa cartella.",
+      "title": "Codice QR",
+      "description": "Scannerizza questo codice QR dalla fotocamera del tuo telefono, Snapchat o qualsiasi altro lettore di codici QR per inviare file a questa cartella."
+    },
+    "file_not_previewable": "Questo file non è disponibile per l'anteprima",
+    "unknown": {
+      "title": "Cartella sconosciuta",
+      "description": "La cartella DocPort a cui stai cercando di accedere non esiste, è stata utilizzata o è scaduta. Controlla l'URL o contatta il proprietario della cartella."
+    },
+    "upload": {
+      "started": {
+        "title": "Teletrasporto in corso",
+        "description": "I tuoi file stanno per essere caricati nella tua cartella"
+      },
+      "success": {
+        "title": "Teletrasporto completato",
+        "description": "I tuoi file sono stati caricati con successo nella tua cartella"
+      }
+    },
+    "title": "Teletrasporto",
+    "description": "Questa pagina ti permette di caricare qualsiasi documento desiderato in modo sicuro su ",
+    "default_requester": "l'entità richiedente",
+    "login_required": "Accesso obbligatorio",
+    "no_file": "Nessun file",
+    "files": {
+      "label": "I tuoi file",
+      "placeholder": "Seleziona i tuoi file",
+      "submit": "Invia"
+    },
+    "disclaimer": {
+      "part_1": "Questa cartella è limitata a",
+      "part_2": "e",
+      "part_3": "per file",
+      "part_4": "Sono accettati solo i tipi",
+      "part_5": "I file saranno disponibili fino a",
+      "part_6": "Inviando i tuoi file, accetti i termini di utilizzo di DocPort"
+    },
+    "files_already_imported": "File già importati",
+    "success": {
+      "message": "I tuoi file sono stati inviati con successo",
+      "title": "Successo"
+    }
+  },
+  "api": {
+    "error": {
+      "not_found": {
+        "title": "DocPort sconosciuto",
+        "description": "La cartella DocPort a cui stai cercando di accedere non esiste, è stata utilizzata o è scaduta."
+      },
+      "generic": {
+        "title": "Errore",
+        "description": "Si è verificato un errore, riprova più tardi."
+      },
+      "unreachable": {
+        "title": "Errore",
+        "description": "Il server è occupato, riprova più tardi."
+      },
+      "upload": {
+        "too_many_files": {
+          "title": "Troppi file",
+          "description": "Non puoi caricare più di {} file."
+        },
+        "file_too_large": {
+          "title": "File troppo grande",
+          "description": "Uno dei tuoi file è troppo grande. La dimensione massima è di {} MB."
+        },
+        "file_type_not_allowed": {
+          "title": "Tipo di file non consentito",
+          "description": "Il tipo di file {} non è consentito."
+        },
+        "size_limit_reached": {
+          "title": "Limite di dimensione raggiunto",
+          "description": "È stata raggiunta la dimensione massima di {} MB."
+        }
+      }
+    }
+  }
+}

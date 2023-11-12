@@ -6,12 +6,16 @@ import '@mantine/notifications/styles.css';
 import {Notifications} from "@mantine/notifications";
 import {MyHeader} from "./components/shell/MyHeader.tsx";
 import {MyFooter} from "./components/shell/MyFooter.tsx";
+import {useTranslation} from "react-i18next";
+import {ModalsProvider} from "@mantine/modals";
 
 export default function App() {
     const {id} = useParams();
+    const {t} = useTranslation();
 
     return (
         <MantineProvider theme={theme}>
+            <ModalsProvider>
             <Notifications/>
             <AppShell
                 header={{height: 56}}
@@ -22,11 +26,11 @@ export default function App() {
                         [
                             {
                                 link: "/",
-                                label: "Accueil",
+                                label: t("header.home")
                             },
                             {
                                 link: "/" + id,
-                                label: "Mon dossier"
+                                label:  t("header.my_folder")
                             }
                         ]
                     }/>
@@ -39,7 +43,7 @@ export default function App() {
                 </AppShell.Main>
 
             </AppShell>
-
+            </ModalsProvider>
         </MantineProvider>
     );
 }

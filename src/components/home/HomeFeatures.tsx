@@ -1,39 +1,8 @@
 import {Container, SimpleGrid, Text, ThemeIcon} from '@mantine/core';
-import {IconCookie, IconGauge, IconLock, IconMessage2, IconSpy, IconUser} from '@tabler/icons-react';
+import {IconGauge, IconLock, IconMessage2, IconSpy, IconUser} from '@tabler/icons-react';
 import classes from "./HomeFeatures.module.css"
+import {useTranslation} from "react-i18next";
 
-export const MOCKDATA = [
-    {
-        icon: IconGauge,
-        title: 'Performances',
-        description:
-            'En se basant uniquement sur des technologies modernes nous pouvons vous offrir des résultats optimaux',
-    },
-    {
-        icon: IconUser,
-        title: 'Vie privée',
-        description:
-            'Seules les informations nécessaires sont collectées et les dossier sont supprimés après leur utilisation ou expiration',
-    },
-    {
-        icon: IconSpy,
-        title: 'Aucun intermédiaire',
-        description:
-            'Nous ne faisons appel à aucun intermédiaire, vous êtes en relation directe avec les technologies utilisées',
-    },
-    {
-        icon: IconLock,
-        title: 'Sécurité',
-        description:
-            'Cet enjeu est au coeur de nos préoccupations, nous mettons tout en oeuvre pour vous offrir un service sécurisé',
-    },
-    {
-        icon: IconMessage2,
-        title: 'Support 24/7 ',
-        description:
-            'Nous sommes à votre écoute pour répondre à vos questions et vous accompagner dans votre utilisation',
-    },
-];
 
 interface FeatureProps {
     icon: React.FC<any>;
@@ -58,6 +27,36 @@ export function Feature({icon: Icon, title, description}: FeatureProps) {
 }
 
 export function HomeFeatures() {
+    const {t} = useTranslation();
+
+    const MOCKDATA = [
+        {
+            icon: IconGauge,
+            title: t("home.features.feature1.title"),
+            description: t("home.features.feature1.description"),
+        },
+        {
+            icon: IconUser,
+            title: t("home.features.feature2.title"),
+            description: t("home.features.feature2.description"),
+        },
+        {
+            icon: IconSpy,
+            title: t("home.features.feature3.title"),
+            description: t("home.features.feature3.description"),
+        },
+        {
+            icon: IconLock,
+            title: t("home.features.feature4.title"),
+            description: t("home.features.feature4.description"),
+        },
+        {
+            icon: IconMessage2,
+            title: t("home.features.feature5.title"),
+            description: t("home.features.feature5.description"),
+        },
+    ];
+
     const features = MOCKDATA.map((feature, index) => <Feature {...feature} key={index}/>);
 
     return (

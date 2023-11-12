@@ -1,0 +1,156 @@
+{
+  "banner": {
+    "safety_message": "For greater security when sending your documents, be sure to navigate to the official DocPort website"
+  },
+  "home": {
+    "features": {
+      "feature1": {
+        "title": "Performance",
+        "description": "By relying solely on modern technologies, we can offer you optimal results."
+      },
+      "feature2": {
+        "title": "Privacy",
+        "description": "Only necessary information is collected, and files are deleted after their use or expiration."
+      },
+      "feature3": {
+        "title": "No Intermediaries",
+        "description": "We do not involve any intermediaries; you are in direct contact with the technologies used."
+      },
+      "feature4": {
+        "title": "Security",
+        "description": "Security is at the core of our concerns, and we make every effort to provide you with a secure service."
+      },
+      "feature5": {
+        "title": "24/7 Support",
+        "description": "We are here to listen, answer your questions, and assist you with your use around the clock."
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "questions": {
+        "q1": {
+          "title": "What is DocPort used for?",
+          "description": "This service allows you to upload documents to a shared folder that will be reused by the Moulinette service. This greatly facilitates, for example, taking photos and transferring them to the technician's workstation."
+        },
+        "q2": {
+          "title": "Who can create a folder?",
+          "description": "Only an authorized Moulinette user has the capability to create a folder."
+        },
+        "q3": {
+          "title": "Who can add documents to a folder?",
+          "description": "Anyone in possession of the folder link can add documents."
+        },
+        "q4": {
+          "title": "Who can access the documents in a folder?",
+          "description": "Only an authorized Moulinette user has the capability to view the documents in a folder."
+        },
+        "q5": {
+          "title": "What are the limitations?",
+          "description": "The limitations are set by the creator of the respective DocPort."
+        }
+      }
+    },
+    "hero": {
+      "cta": {
+        "demo": "Request a demo"
+      },
+      "title1": "Create",
+      "title2": "teleport",
+      "title3": "it's done",
+      "description": "It was time to create a file-sharing system that works for your team and your customers, easily and securely."
+    }
+  },
+  "header": {
+    "home": "Home",
+    "my_folder": "My folder"
+  },
+  "general": {
+    "file": "file",
+    "megabyte": "MB",
+    "download": "Download",
+    "name": "Name"
+  },
+  "footer": {
+    "copy": "All rights reserved"
+  },
+  "docport": {
+    "qrcode": {
+      "popover": "You can click here and scan the QR code to send files from your phone to this folder.",
+      "title": "QR Code",
+        "description": "Scan this QR code from your phone camera app, Snapchat or any other QR code scanner to send files to this folder."
+    },
+    "file_not_previewable": "This file is not available for preview",
+    "unknown": {
+      "title": "Unknown folder",
+      "description": "The DocPort folder you are trying to reach does not exist, has been used or has expired. Please check the URL or contact the folder owner."
+    },
+    "upload": {
+      "started": {
+        "title": "Téleportation in progress",
+        "description": "Your files are being uploaded to your folder"
+      },
+      "success": {
+        "title": "Teleportation completed",
+        "description": "Your files have been successfully uploaded to your folder"
+      }
+    },
+    "title": "Teleportation",
+    "description": "This page lets you upload any document you would like in a secure way to ",
+    "default_requester": "the requesting entity",
+    "login_required": "Login required",
+    "no_file": "No file",
+    "files": {
+      "label": "Your files",
+      "placeholder": "Select your files",
+      "submit": "Send"
+    },
+    "disclaimer": {
+      "part_1": "This folder is limited to",
+      "part_2": "and",
+      "part_3": "per file",
+      "part_4": "Only the types",
+      "part_5": "are accepted",
+      "part_6": "The files will be available until",
+      "part_7": "By sending your files, you agree to the DocPort terms of use"
+    },
+    "files_already_imported": "Already imported files",
+    "success": {
+      "message": "Your files have been successfully sent",
+      "title": "Success"
+    }
+  },
+  "api": {
+    "error": {
+      "not_found": {
+        "title": "DocPort unknown",
+        "description": "The DocPort folder you are trying to reach does not exist, has been used or has expired."
+      },
+      "generic": {
+        "title": "Error",
+        "description": "An error has occurred, please try again later."
+      },
+      "unreachable": {
+        "title": "Error",
+        "description": "The server is busy, please try again later."
+      },
+      "upload": {
+        "too_many_files": {
+          "title": "Too many files",
+          "description": "You can't upload more than {} files."
+        },
+        "file_too_large": {
+          "title": "File too large",
+          "description": "One of your files is too large. The maximum size is {} MB."
+        },
+        "file_type_not_allowed": {
+          "title": "File type not allowed",
+          "description": "The file type {} is not allowed."
+        },
+        "size_limit_reached": {
+          "title": "Size limit reached",
+          "description": "The maximum size of {} MB has been reached."
+        }
+      }
+    }
+  }
+}

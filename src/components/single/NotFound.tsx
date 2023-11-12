@@ -3,25 +3,26 @@ import image from './404.svg';
 import {IconLockOpen} from "@tabler/icons-react";
 import {useState} from "react";
 import classes from "./NotFound.module.css";
+import {useTranslation} from "react-i18next";
 
 export function NotFound() {
     const [value, setValue] = useState('');
+    const {t} = useTranslation();
 
     return (
         <Container className={classes.root}>
             <SimpleGrid spacing={{base: 40, sm: 80}} cols={{base: 1, sm: 2}}>
                 <Image src={image} className={classes.mobileImage}/>
                 <div>
-                    <Title className={classes.title}>Dossier inconnu</Title>
+                    <Title className={classes.title}>{t("docport.unknown.title")}</Title>
                     <Text c="dimmed" size="lg">
-                        Le dossier DocPort que vous essayez d'atteindre n'existe pas, a été utilisé ou a expiré.
-                        Veuillez vérifier l'URL ou contacter le propriétaire du dossier.
+                        {t("docport.unknown.description")}
                     </Text>
                     <Group wrap={"nowrap"} align={"center"} mt="xl">
                         <TextInput
                             size="md"
                             className={classes.control}
-                            placeholder="ID du dossier"
+                            placeholder="ID"
                             value={value}
                             onChange={(event) => setValue(event.currentTarget.value)}
                         />

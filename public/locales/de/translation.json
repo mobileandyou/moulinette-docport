@@ -1,0 +1,156 @@
+{
+  "banner": {
+    "safety_message": "Für mehr Sicherheit beim Versenden Ihrer Dokumente sollten Sie sicherstellen, dass Sie zur offiziellen DocPort-Website navigieren."
+  },
+  "home": {
+    "features": {
+      "feature1": {
+        "title": "Leistung",
+        "description": "Durch den ausschließlichen Einsatz moderner Technologien können wir optimale Ergebnisse für Sie erzielen."
+      },
+      "feature2": {
+        "title": "Datenschutz",
+        "description": "Es werden nur notwendige Informationen gesammelt, und Dateien werden nach ihrer Nutzung oder dem Ablauf gelöscht."
+      },
+      "feature3": {
+        "title": "Keine Vermittler",
+        "description": "Es werden keine Vermittler eingeschaltet. Sie stehen direkt im Kontakt mit den verwendeten Technologien."
+      },
+      "feature4": {
+        "title": "Sicherheit",
+        "description": "Sicherheit steht im Mittelpunkt unserer Anliegen, und wir setzen alles daran, Ihnen einen sicheren Service zu bieten."
+      },
+      "feature5": {
+        "title": "24/7 Support",
+        "description": "Wir sind hier, um zuzuhören, Ihre Fragen zu beantworten und Sie rund um die Uhr bei der Nutzung zu unterstützen."
+      }
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "questions": {
+        "q1": {
+          "title": "Wofür wird DocPort verwendet?",
+          "description": "Dieser Service ermöglicht es Ihnen, Dokumente in einen freigegebenen Ordner hochzuladen, der vom Moulinette-Dienst wiederverwendet wird. Dies erleichtert beispielsweise das Fotografieren und Übertragen auf die Arbeitsstation des Technikers."
+        },
+        "q2": {
+          "title": "Wer kann einen Ordner erstellen?",
+          "description": "Nur ein autorisierter Moulinette-Benutzer hat die Befugnis, einen Ordner zu erstellen."
+        },
+        "q3": {
+          "title": "Wer kann Dokumente zu einem Ordner hinzufügen?",
+          "description": "Jeder im Besitz des Ordnerlinks kann Dokumente hinzufügen."
+        },
+        "q4": {
+          "title": "Wer kann auf die Dokumente in einem Ordner zugreifen?",
+          "description": "Nur ein autorisierter Moulinette-Benutzer hat die Befugnis, die Dokumente in einem Ordner anzuzeigen."
+        },
+        "q5": {
+          "title": "Was sind die Einschränkungen?",
+          "description": "Die Einschränkungen werden vom Ersteller des jeweiligen DocPorts festgelegt."
+        }
+      }
+    },
+    "hero": {
+      "cta": {
+        "demo": "Eine Demo anfordern"
+      },
+      "title1": "Erstellen",
+      "title2": "teleportieren",
+      "title3": "fertig",
+      "description": "Es war an der Zeit, ein Dateifreigabesystem zu schaffen, das für Ihr Team und Ihre Kunden einfach und sicher funktioniert."
+    }
+  },
+  "header": {
+    "home": "Startseite",
+    "my_folder": "Mein Ordner"
+  },
+  "general": {
+    "file": "Datei",
+    "megabyte": "MB",
+    "download": "Herunterladen",
+    "name": "Name"
+  },
+  "footer": {
+    "copy": "Alle Rechte vorbehalten"
+  },
+  "docport": {
+    "qrcode": {
+      "popover": "Sie können hier klicken und den QR-Code scannen, um Dateien von Ihrem Telefon zu diesem Ordner zu senden.",
+      "title": "QR-Code",
+      "description": "Scannen Sie diesen QR-Code mit Ihrer Telefonkamera, Snapchat oder einem anderen QR-Code-Scanner, um Dateien zu diesem Ordner zu senden."
+    },
+    "file_not_previewable": "Diese Datei kann nicht vorab angezeigt werden",
+    "unknown": {
+      "title": "Unbekannter Ordner",
+      "description": "Der DocPort-Ordner, den Sie erreichen möchten, existiert nicht, wurde verwendet oder ist abgelaufen. Bitte überprüfen Sie die URL oder kontaktieren Sie den Ordnerbesitzer."
+    },
+    "upload": {
+      "started": {
+        "title": "Teleportation läuft",
+        "description": "Ihre Dateien werden zu Ihrem Ordner hochgeladen"
+      },
+      "success": {
+        "title": "Teleportation abgeschlossen",
+        "description": "Ihre Dateien wurden erfolgreich zu Ihrem Ordner hochgeladen"
+      }
+    },
+    "title": "Teleportation",
+    "description": "Diese Seite ermöglicht es Ihnen, jedes gewünschte Dokument sicher hochzuladen zu ",
+    "default_requester": "die anfragende Stelle",
+    "login_required": "Anmeldung erforderlich",
+    "no_file": "Keine Datei",
+    "files": {
+      "label": "Ihre Dateien",
+      "placeholder": "Wählen Sie Ihre Dateien aus",
+      "submit": "Senden"
+    },
+    "disclaimer": {
+      "part_1": "Dieser Ordner ist auf",
+      "part_2": "und",
+      "part_3": "pro Datei begrenzt",
+      "part_4": "Es werden nur die Typen",
+      "part_5": "akzeptiert",
+      "part_6": "Die Dateien sind verfügbar bis",
+      "part_7": "Durch das Senden Ihrer Dateien stimmen Sie den Nutzungsbedingungen von DocPort zu"
+    },
+    "files_already_imported": "Bereits importierte Dateien",
+    "success": {
+      "message": "Ihre Dateien wurden erfolgreich gesendet",
+      "title": "Erfolg"
+    }
+  },
+  "api": {
+    "error": {
+      "not_found": {
+        "title": "DocPort unbekannt",
+        "description": "Der DocPort-Ordner, den Sie erreichen möchten, existiert nicht, wurde verwendet oder ist abgelaufen."
+      },
+      "generic": {
+        "title": "Fehler",
+        "description": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut."
+      },
+      "unreachable": {
+        "title": "Fehler",
+        "description": "Der Server ist ausgelastet. Bitte versuchen Sie es später erneut."
+      },
+      "upload": {
+        "too_many_files": {
+          "title": "Zu viele Dateien",
+          "description": "Sie können nicht mehr als {} Dateien hochladen."
+        },
+        "file_too_large": {
+          "title": "Datei zu groß",
+          "description": "Eine Ihrer Dateien ist zu groß. Die maximale Größe beträgt {} MB."
+        },
+        "file_type_not_allowed": {
+          "title": "Dateityp nicht erlaubt",
+          "description": "Der Dateityp {} ist nicht erlaubt."
+        },
+        "size_limit_reached": {
+          "title": "Größenlimit erreicht",
+          "description": "Das maximale Größenlimit von {} MB wurde erreicht."
+        }
+      }
+    }
+  }
+}

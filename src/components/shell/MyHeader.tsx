@@ -17,6 +17,7 @@ import {IconInfoCircle, IconLock} from '@tabler/icons-react';
 import {useNavigate} from "react-router-dom";
 import classes from "./MyHeader.module.css";
 import {useDisclosure} from "@mantine/hooks";
+import {useTranslation} from "react-i18next";
 
 interface HeaderMiddleProps {
     links: {
@@ -57,8 +58,10 @@ export function MyHeader({links}: HeaderMiddleProps) {
     useEffect(() => {
         setTimeout(() => {
             setInfoBanner(false);
-        }, 5000);
+        }, 10000);
     }, []);
+
+    const {t} = useTranslation();
 
     return (<>
         <header className={classes.header}>
@@ -90,10 +93,9 @@ export function MyHeader({links}: HeaderMiddleProps) {
 
                 </Group>
             </Container>
-            {infoBanner && <Box className={classes.infoBanner}>
-                <Text size={"xs"} ta={"center"} fw={"bold"}>
-                    Pour plus de sécurité dans l'envoi de vos documents, assurez-vous de naviguer sur le site officiel
-                    de DocPort :&nbsp;
+            {infoBanner && <Box className={classes.infoBanner} visibleFrom={"sm"}>
+                <Text size={"xs"} ta={"center"} fw={"bold"} >
+                    {t("banner.safety_message")}:&nbsp;
                     <IconLock size={10}/> <u>docport.moulinette.eu</u>
                 </Text>
             </Box>}
@@ -115,8 +117,7 @@ export function MyHeader({links}: HeaderMiddleProps) {
                 <Divider my="sm"/>
 
                 <Text size={"xs"} ta={"center"} fw={"bold"} px={"xl"} py={"md"}>
-                    Pour plus de sécurité dans l'envoi de vos documents, assurez-vous de naviguer sur le site officiel
-                    de DocPort :&nbsp;
+                    {t("banner.safety_message")}:&nbsp;
                     <IconLock size={10}/> <u>docport.moulinette.eu</u>
                 </Text>
             </ScrollArea>

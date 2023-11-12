@@ -1,0 +1,156 @@
+{
+  "banner": {
+    "safety_message": "Pour plus de sécurité dans l'envoi de vos documents, assurez-vous de naviguer sur le site officiel de DocPort "
+  },
+  "home": {
+    "features": {
+      "feature1": {
+        "title": "Performances",
+        "description": "En se basant uniquement sur des technologies modernes nous pouvons vous offrir des résultats optimaux"
+      },
+      "feature2": {
+        "title": "Vie privée",
+        "description": "Seules les informations nécessaires sont collectées et les dossier sont supprimés après leur utilisation ou expiration"
+      },
+      "feature3": {
+        "title": "Aucun intermédiaire",
+        "description": "Nous ne faisons appel à aucun intermédiaire, vous êtes en relation directe avec les technologies utilisées"
+      },
+      "feature4": {
+        "title": "Sécurité",
+        "description": "Cet enjeu est au coeur de nos préoccupations, nous mettons tout en oeuvre pour vous offrir un service sécurisé"
+      },
+      "feature5": {
+        "title": "Support 24/7",
+        "description": "ous sommes à votre écoute pour répondre à vos questions et vous accompagner dans votre utilisation"
+      }
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "questions": {
+        "q1": {
+          "title": "À quoi sert DocPort ?",
+          "description": "Ce service permet de téléverser des documents dans un dossier partagé qui sera réutilisé par le service Moulinette. Cela facilite grandement par exemple la prise de photos et son transfert sur le poste fixe du technicien."
+        },
+        "q2": {
+          "title": "Qui peut créer un dossier ?",
+          "description": "Seul un utilisateur autorisé de Moulinette est en capacité de créer un dossier."
+        },
+        "q3": {
+          "title": "Qui peut ajouter des documents dans un dossier ?",
+          "description": "Toute personne en possession du lien du dossier peut ajouter des documents."
+        },
+        "q4": {
+          "title": "Qui peut accéder aux documents d'un dossier ?",
+          "description": "Seul un utilisateur autorisé de Moulinette est en capacité de consulter les documents d'un dossier."
+        },
+        "q5": {
+          "title": "Quelles sont les limitations ?",
+          "description": "Les limites sont fixées par le créateur du DocPort en question."
+        }
+      }
+    },
+    "hero": {
+      "cta": {
+        "demo": "Demander une démo"
+      },
+      "title1": "Créez",
+      "title2": "téléportez",
+      "title3": "c'est fait",
+      "description": "Il était temps de créer un système de partage de fichiers qui fonctionne pour votre équipe et vos clients, facilement et en toute sécurité."
+    }
+  },
+  "header": {
+    "home": "Accueil",
+    "my_folder": "Mon dossier"
+  },
+  "general": {
+    "file": "fichier",
+    "megabyte": "Mo",
+    "download": "Télécharger",
+    "name": "Nom"
+  },
+  "footer": {
+    "copy": "Tous droits réservés"
+  },
+  "docport": {
+    "upload": {
+      "started": {
+        "title": "Téléportation en cours",
+        "description": "Vos fichiers sont en cours de traitement"
+      },
+      "success": {
+        "title": "Téléportation réussie",
+        "description": "Vos fichiers sont ajoutés à votre dossier"
+      }
+    },
+    "unknown": {
+      "title": "Dossier inconnu",
+      "description": "Le dossier DocPort que vous essayez d'atteindre n'existe pas, a été utilisé ou a expiré. Veuillez vérifier l'URL ou contacter le propriétaire du dossier."
+    },
+    "qrcode": {
+      "popover": "Vous pouvez cliquer ici pour afficher un QR code afin d'ajouter des fichiers depuis votre téléphone",
+      "title": "QR Code",
+      "description": "Scannez ce QR code depuis votre application de caméra, Snapchat ou tout autre scanner de QR code pour envoyer des fichiers dans ce dossier."
+    },
+    "file_not_previewable": "Ce fichier n'est pas prévisualisable",
+    "title": "Téléportation",
+    "description": "Cette page vous permet de transmettre des documents de manière sécurisée à",
+    "default_requester": "l'entité qui vous les demande",
+    "login_required": "Connexion nécessaire",
+    "no_file": "Aucun fichier",
+    "files": {
+      "label": "Vos fichiers",
+      "placeholder": "Séléctionnez vos fichiers",
+      "submit": "Envoyer"
+    },
+    "disclaimer": {
+      "part_1": "Ce dossier est limité à",
+      "part_2": "et",
+      "part_3": "par fichier",
+      "part_4": "Seuls les fichiers de types",
+      "part_5": "sont autorisés",
+      "part_6": "Les fichiers seront conservés jusqu'au",
+      "part_7": "En envoyant vos fichiers, vous acceptez les conditions d'utilisation de DocPort"
+    },
+    "files_already_imported": "Fichiers déjà importés",
+    "success": {
+      "message": "Vos fichiers ont été envoyés avec succès",
+      "title": "Succès"
+    }
+  },
+  "api": {
+    "error": {
+      "not_found": {
+        "title": "DocPort inconnu",
+        "description": "Le dossier que vous essayez d'atteindre n'existe pas, a été utilisé ou a expiré."
+      },
+      "generic": {
+        "title": "Erreur",
+        "description": "Une erreur est survenue, veuillez réessayer plus tard."
+      },
+      "unreachable": {
+        "title": "Erreur",
+        "description": "Le service DocPort est actuellement indisponible, veuillez réessayer plus tard."
+      },
+      "upload": {
+        "too_many_files": {
+          "title": "Trop de fichiers",
+          "description": "Vous ne pouvez pas envoyer plus de {} fichiers."
+        },
+        "file_too_large": {
+          "title": "Fichier trop volumineux",
+          "description": "Un fichier est trop volumineux. La taille maximale est de {} Mo."
+        },
+        "file_type_not_allowed": {
+          "title": "Type de fichier non autorisé",
+          "description": "Le type {} n'est pas autorisé."
+        },
+        "size_limit_reached": {
+          "title": "Limite de taille atteinte",
+          "description": "La taille maximale de ce dossier est de {} Mo."
+        }
+      }
+    }
+  }
+}

@@ -3,9 +3,11 @@ import { Dots } from './Dots.tsx';
 import {IconBooks} from "@tabler/icons-react";
 import {useNavigate} from "react-router-dom";
 import classes from "./HomeHero.module.css";
+import {useTranslation} from "react-i18next";
 
 export function HomeHero() {
     const navigate = useNavigate();
+    const { t } = useTranslation();
 
     return (
         <Container className={classes.wrapper} size={1400}>
@@ -16,23 +18,23 @@ export function HomeHero() {
 
             <div className={classes.inner}>
                 <Title className={classes.title}>
-                    Créez,{' '}
+                    {t("home.hero.title1")},{' '}
                     <Text component="span" className={classes.highlight} inherit>
-                        téléportez
+                        {t("home.hero.title2")}
                     </Text>...{' '}
-                    c'est fait.
+                    {t("home.hero.title3")}.
                 </Title>
 
                 <Container p={0} size={600}>
                     <Text size="lg" c="dimmed" className={classes.description}>
-                        Il est temps de créer un workflow de partage de fichiers qui fonctionne pour vous et votre équipe, facilement et en toute sécurité.
+                        {t("home.hero.description")}
                     </Text>
                 </Container>
 
                 <div className={classes.controls}>
                     <Button className={classes.control} size="lg" variant="default" color="gray" onClick={() =>
                         window.open("mailto:julien+docport@astrepid.com")}>
-                        Demander une démo
+                        {t("home.hero.cta.demo")}
                     </Button>
                     <Button className={classes.control} color={"red.8"} size="lg" onClick={() => navigate("/undefined")}>
                         <IconBooks/>
