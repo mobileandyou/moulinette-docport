@@ -95,7 +95,7 @@
       }
     },
     "title": "Teleportation",
-    "description": "This page lets you upload any document you would like in a secure way to ",
+    "description": "This page lets you upload any document you would like in a secure way to",
     "default_requester": "the requesting entity",
     "login_required": "Login required",
     "no_file": "No file",

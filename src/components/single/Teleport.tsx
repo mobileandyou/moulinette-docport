@@ -85,7 +85,7 @@ export default function Teleport({data, setData}: UploadProps) {
                         icon: <IconSend size={18}/>,
                         title: t("docport.upload.success.title"),
                         loading: false,
-                        message: t("docport.upload.success.message"),
+                        message: t("docport.upload.success.description"),
                         autoClose: 5000,
                         color: "red"
                     })
@@ -134,7 +134,7 @@ export default function Teleport({data, setData}: UploadProps) {
     }
 
     const [popover, setPopover] = useState(largeEnough);
-    
+
     return (
         <>
             <Stack gap={0} align={"center"} p={"md"}>
