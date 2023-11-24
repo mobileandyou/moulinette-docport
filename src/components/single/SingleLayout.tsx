@@ -14,14 +14,16 @@ export default function SingleLayout() {
     const [docPort, setDocPort] = useState<any>(null);
     const [loading, setLoading] = useState(true);
     const {t} = useTranslation();
+    const [realId, setRealId] = useState<string | undefined>(id);
+
     async function getDocPort(silent?: boolean) {
         if (!silent) setLoading(true);
-        if (id === "undefined" || id === undefined) {
+        if (realId === "undefined" || realId === undefined) {
             setError("");
             setLoading(false);
             return;
         }
-        fetch("https://api.moulinette.eu/tool/docport/" + id,
+        fetch("https://api.moulinette.eu/tool/docport/" + realId,
             {headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer ' + localStorage.getItem('token')}},
         )
             .then(response => response.json())
@@ -44,6 +46,7 @@ export default function SingleLayout() {
     }
 
     useEffect(() => {
+        setError(undefined);
         getDocPort();
 
         // every 5 seconds
@@ -52,8 +55,7 @@ export default function SingleLayout() {
         }, 5000);
 
         return () => clearInterval(interval);
-    }, []);
-
+    }, [realId]);
 
     // if query contains ?token= set localstorage token
     useEffect(() => {
@@ -68,9 +70,10 @@ export default function SingleLayout() {
     return (
         <Container p={0} className={classes.root}>
             <Stack align={"center"}>
+
                 {loading ? <Loader color={"red"} size={"md"}/> :
                     (
-                        id === "undefined" ? <NoCaseProvided/> : error ? <NotFound/> :
+                        realId === "undefined" ? <NoCaseProvided setRealId={setRealId}/> : error ? <NotFound setRealId={setRealId}/> :
                             <Teleport data={docPort} setData={setDocPort} getDocPort={getDocPort}/>
                     )
                 }

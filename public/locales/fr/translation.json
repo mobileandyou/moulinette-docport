@@ -30,7 +30,7 @@
       "questions": {
         "q1": {
           "title": "À quoi sert DocPort ?",
-          "description": "Ce service vous permet de télécharger des documents dans un dossier partagé qui sera réutilisé par le service Moulinette. Cela facilite notamment la prise de photos et leur transfert sur le poste de travail du technicien."
+          "description": "Ce service vous permet de téléverser des documents dans un dossier partagé qui sera réutilisé par le service Moulinette. Cela facilite notamment la prise de photos et leur transfert sur le poste de travail du technicien."
         },
         "q2": {
           "title": "Qui peut créer un dossier ?",
@@ -65,7 +65,7 @@
     "my_folder": "Mon dossier"
   },
   "general": {
-    "file": "Fichier",
+    "file": "fichier",
     "megabyte": "Mo",
     "download": "Télécharger",
     "name": "Nom",
@@ -92,15 +92,15 @@
     "upload": {
       "started": {
         "title": "Téléportation en cours",
-        "description": "Vos fichiers sont en cours de téléchargement dans votre dossier"
+        "description": "Vos fichiers sont en cours de téléversement dans votre dossier"
       },
       "success": {
         "title": "Téléportation terminée",
-        "description": "Vos fichiers ont été téléchargés avec succès dans votre dossier"
+        "description": "Vos fichiers ont été téléversés avec succès dans votre dossier"
       }
     },
     "title": "Téléportation",
-    "description": "Cette page vous permet de télécharger en toute sécurité n'importe quel document que vous souhaitez sur",
+    "description": "Cette page vous permet de téléverser en toute sécurité n'importe quel document que vous souhaitez sur",
     "default_requester": "l'entité demandante",
     "login_required": "Connexion requise",
     "file_expired": "Fichier expiré",
@@ -143,7 +143,7 @@
       "upload": {
         "too_many_files": {
           "title": "Trop de fichiers",
-          "description": "Vous ne pouvez pas télécharger plus de {} fichiers."
+          "description": "Vous ne pouvez pas téléverser plus de {} fichiers."
         },
         "file_too_large": {
           "title": "Fichier trop volumineux",

@@ -5,7 +5,11 @@ import {useState} from "react";
 import classes from "./NotFound.module.css";
 import {useTranslation} from "react-i18next";
 
-export function NoCaseProvided() {
+interface Props {
+    setRealId: (id: string) => void;
+}
+
+export function NoCaseProvided({setRealId}: Props) {
     const [value, setValue] = useState('');
     const {t} = useTranslation();
 
@@ -27,7 +31,7 @@ export function NoCaseProvided() {
                             onChange={(event) => setValue(event.currentTarget.value)}
                         />
                         <Button variant="outline" size="md" className={classes.control}
-                                onClick={() => window.location.replace("/" + value)}>
+                                onClick={() => setRealId(value)}>
                             <IconLockOpen/>
                         </Button>
                     </Group>
