@@ -1,9 +1,12 @@
 import {
+    Alert,
+    Anchor,
     Avatar,
     Box,
-    Button, Center,
+    Button,
+    Center,
+    Code,
     Divider,
-    FileInput,
     Group,
     Image,
     Popover,
@@ -13,22 +16,23 @@ import {
     ThemeIcon
 } from "@mantine/core";
 import {
+    IconCloudUpload,
     IconDownload,
     IconFiles,
     IconFileUpload,
     IconHash,
     IconLock,
     IconQrcode,
-    IconSend,
-    IconUpload,
+    IconSend, IconTrash,
     IconX
 } from "@tabler/icons-react";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
 import {showNotification, updateNotification} from "@mantine/notifications";
 import {useTranslation} from "react-i18next";
 import {modals} from '@mantine/modals';
 import {useMediaQuery} from "@mantine/hooks";
+import {Dropzone} from "@mantine/dropzone";
 
 interface UploadProps {
     data?: any;
@@ -53,9 +57,20 @@ export default function Teleport({data, setData}: UploadProps) {
     const [files, setFiles] = useState<File[]>([]);
     const {id} = useParams();
     const {t} = useTranslation();
+    const [success, setSuccess] = useState(false);
+    const [loading, setLoading] = useState(false);
+    // is large enough
+    const largeEnough = useMediaQuery("(min-width: 550px)");
+    const [error, setError] = useState<string | undefined>(undefined);
+
+    function handleDrop(files: File[]) {
+        setFiles(files);
+    }
 
     async function upload() {
         const formData = new FormData();
+        setLoading(true);
+        setError(undefined)
 
         for (let i = 0; i < files.length; i++) {
             formData.append('files', files[i]);
@@ -75,6 +90,7 @@ export default function Teleport({data, setData}: UploadProps) {
             redirect: 'follow'
         })
             .then(response => {
+                setLoading(false);
                 if (response.ok) {
                     response.json().then(json => {
                         setData(json);
@@ -89,7 +105,9 @@ export default function Teleport({data, setData}: UploadProps) {
                         autoClose: 5000,
                         color: "red"
                     })
+                    setSuccess(true);
                 } else {
+                    setSuccess(false);
                     // get json
                     response.json().then(json => {
                         if (json?.code) {
@@ -102,6 +120,7 @@ export default function Teleport({data, setData}: UploadProps) {
                                 autoClose: 5000,
                                 color: "red"
                             })
+                            setError(EnrichErrorMessage(t(json.code + ".description"), json?.inserts || []) || t("api.error.generic.description"));
                         } else {
                             updateNotification({
                                 id: "loading",
@@ -112,11 +131,17 @@ export default function Teleport({data, setData}: UploadProps) {
                                 autoClose: 5000,
                                 color: "red"
                             })
+
+                            setError(json.message || t("api.error.generic.description"));
                         }
                     });
                 }
             })
-            .catch(error => alert(error));
+            .catch(error => {
+                alert(error)
+                setSuccess(false);
+                setLoading(false);
+            });
 
     }
 
@@ -124,22 +149,54 @@ export default function Teleport({data, setData}: UploadProps) {
     const [popoverImg, setPopoverImg] = useState<string>("");
 
     // close after 10 seconds
-    setTimeout(() => setPopover(false), 10000);
-
-    // is large enough
-    const largeEnough = useMediaQuery("(min-width: 550px)");
+    setTimeout(() => {
+        setPopover(false);
+        console.log("closed popover")
+    }, 10000);
     function transformFileUrl(url: string) {
         //return url.replace("https://api.moulinette.eu", "http://localhost:8090");
         return url;
     }
 
-    const [popover, setPopover] = useState(largeEnough);
+    const [popover, setPopover] = useState(false);
+
+    useEffect(() => {
+        if(largeEnough) setPopover(true);
+    }, [largeEnough]);
+
+    useEffect(() => {
+        setFiles([]);
+        setSuccess(false);
+        setLoading(false);
+    }, [success]);
+
+    function previewFile(file: any) {
+        switch (file?.name?.split(".").pop()) {
+            case "png":
+            case "gif":
+            case "jpg":
+            case "jpeg":
+                return <Image src={transformFileUrl(file.url)} radius={"sm"} mah={400}/>;
+            case "pdf":
+                return <iframe src={transformFileUrl(file.url)} width={"100%"}
+                               height={"400px"} frameBorder={"0"}/>
+            case "mp4":
+            case "mov":
+                return <video height={"400px"} controls>
+                    <source src={transformFileUrl(file.url)} type="video/mp4"/>
+                    {t("docport.file_not_previewable")}
+                </video>;
+            default:
+                return <Text size={"xs"}
+                             c={"dimmed"}>{t("docport.file_not_previewable")}</Text>;
+        }
+    }
 
     return (
         <>
             <Stack gap={0} align={"center"} p={"md"}>
                 <ThemeIcon variant="white" size="xl" color="red">
-                    <IconFileUpload size={45}/>
+                    <IconCloudUpload size={45}/>
                 </ThemeIcon>
 
                 <Text pb={5} size="xl"
@@ -147,23 +204,65 @@ export default function Teleport({data, setData}: UploadProps) {
                       c={"red"}>{t("docport.title")}</Text>
                 <Text fw={"bold"} size={"md"} maw={largeEnough ? "55%" : "100%"} ta={"center"}
                       lh={1.4}>{t("docport.description")}&nbsp;{data?.requester ?? t("docport.default_requester")}.</Text>
-                <Group gap={5} align={"center"} c={"dimmed"}>
-                    <IconHash size={14}/>
-                    <Text pt={5} size={"xs"} fw={"bold"}>{data?.id}</Text>
+                <Group gap={3} align={"start"} c={"dimmed"} pt={5}>
+                    <IconHash size={13}/>
+                    <Text size={"xs"} fw={"bold"}>{data?.id}</Text>
                 </Group>
+
+                {data?.comment && <Stack gap={5} justify={"center"} align={"center"} pt={"xl"} ta={"center"}
+                                         maw={largeEnough ? "55%" : "100%"}>
+                    <Code fw={"bold"}>{data?.comment}</Code>
+                </Stack>}
             </Stack>
 
-            <Stack align={"center"} mt={5} gap={30}>
-                <FileInput
+            <Stack align={"center"} gap={30}>
+                {/*<FileInput
                     multiple
                     required
                     accept={data?.limits?.allowedMimes?.join(", ")}
                     leftSection={<IconUpload size={15}/>}
                     value={files}
+                    miw={largeEnough ? "250" : "70%"}
                     placeholder={t("docport.files.placeholder")}
                     onChange={(files) => setFiles(files)}
-                />
+                />*/}
 
+                {error && <Alert c="red" icon={<IconX/>} w={"100%"} title={error} onClick={() => setError(undefined)}/>}
+
+                <Dropzone
+                    loading={loading}
+                    onDrop={handleDrop}
+                    maxSize={data?.limits?.maxFileSize}
+                    accept={data?.limits?.allowedMimes}
+                    w={"100%"}
+                >
+                    <Group justify="center" p="xl" gap={0}
+                           style={{minHeight: 150, width: "100%", pointerEvents: 'none'}}>
+                        {files ? (
+                            <Stack gap={5} align={"center"}>
+                                <IconFileUpload size={40}/>
+                                <Text size="md" pt={10} inline>
+                                    {files?.length === 0 ? <b>{t("docport.files.placeholder")}</b> :
+                                        <b>{files?.map((file: any) => file?.name).join(", ")} </b>}
+                                </Text>
+                                <Text size="xs" c="dimmed" ta={"center"} inline mt={7}>
+                                    {t("docport.files.placeholder_long")}
+                                </Text>
+                            </Stack>) : (
+                            <Stack gap={5} align={"center"}>
+                                <IconFileUpload size={40}/>
+                                <Text size="md" pt={20} inline>
+                                    <b>{id}</b>
+                                </Text>
+                                <Text size="xs" c="dimmed" ta={"center"} inline mt={7}>
+                                    Déposez une image de <b>{id}</b> ou cliquez ici pour en
+                                    sélectionner une...
+                                </Text>
+                            </Stack>
+                        )}
+                    </Group>
+
+                </Dropzone>
 
                 <Group gap={"sm"}>
                     <Button variant={"filled"} color={"red"} onClick={() => upload()}
@@ -212,7 +311,7 @@ export default function Teleport({data, setData}: UploadProps) {
                 }
             />
 
-            <Table maw={500} verticalSpacing="sm" mt={5} striped highlightOnHover>
+            <Table maw={700} verticalSpacing="sm" mt={5} striped highlightOnHover>
                 <Table.Thead>
                     <Table.Tr>
                         <Table.Th>{t("general.name")}</Table.Th>
@@ -226,34 +325,47 @@ export default function Teleport({data, setData}: UploadProps) {
                     {data?.files.map((file: any) => (
                         <Table.Tr key={file?.name}>
                             <Table.Td>
-                                <Group align={"center"} gap={10}>
+                                <Group align={"center"} gap={10} wrap={"nowrap"}>
                                     <Popover opened={popoverImg === file?.name && file.url} withArrow shadow={"xl"}>
-                                        <Popover.Dropdown>
+                                        <Popover.Dropdown onMouseLeave={() => setPopoverImg("")}>
                                             <Center>
-                                                {["png", "gif", "jpg", "jpeg"].includes(file?.name?.split(".").pop()) ?
-                                                    <Image src={transformFileUrl(file.url)} radius={"sm"} maw={400}/> :
-                                                    ["pdf"].includes(file?.name?.split(".").pop()) ?
-                                                    <iframe src={transformFileUrl(file.url)} width={"100%"} height={"100%"} frameBorder={"0"}/>
-                                                        : <Text size={"xs"} c={"dimmed"}>{t("docport.file_not_previewable")}</Text>
-                                                }
+                                                {previewFile(file)}
                                             </Center>
+                                            <Anchor onClick={() => setPopoverImg("")} style={{textDecoration: "none"}}>
+                                                <Group gap={5} align={"center"} justify={"center"} c={"dark"} pt={"sm"}>
+                                                    <IconX size={10}/>
+                                                    <Text size={"xs"} fw={"bold"}>{t("general.close")}</Text>
+                                                </Group>
+                                            </Anchor>
                                         </Popover.Dropdown>
                                         <Popover.Target>
-                                            {["png", "gif", "jpg", "jpeg"].includes(file?.name?.split(".").pop()) ?<Avatar size={"sm"} radius={"sm"} onMouseEnter={() => setPopoverImg(file?.name)} onMouseLeave={() => setPopoverImg("")}
-                                                                                                                           src={transformFileUrl(file.url)}><IconFiles size={15}/></Avatar>:
-                                                <Avatar size={"sm"} radius={"sm"} onMouseEnter={() => setPopoverImg(file?.name)} onMouseLeave={() => setPopoverImg("")}><IconFiles size={15}/></Avatar>}
+                                            <Avatar size={"sm"} radius={"sm"}
+                                                    onMouseEnter={() => setPopoverImg(file?.name)}
+                                                    src={transformFileUrl(file.url)}><IconFiles
+                                                size={15}/></Avatar>
                                         </Popover.Target>
                                     </Popover>
-                                <Text size={"sm"}>{file.name}</Text>
+                                    <Text size={"sm"} visibleFrom={"sm"}>{file.name}</Text>
+                                    <Text size={"sm"}
+                                          hiddenFrom={"sm"}>{file.name?.substring(0, 10) + "..." + file.name?.substring(file.name?.length - 10, file.name?.length)}</Text>
                                 </Group>
                             </Table.Td>
                             <Table.Td>{transformFileUrl(file.url) ?
-                                <Button size={"xs"} color={"red"} variant={"outline"}
-                                        onClick={() => window.open(transformFileUrl(file.url))} leftSection={<IconDownload size={10}/>}>
+                                <><Button size={"xs"} color={"red"} variant={"outline"} visibleFrom={"xs"}
+                                          onClick={() => window.open(transformFileUrl(file.url))}
+                                          leftSection={<IconDownload size={10}/>}>
                                     {t("general.download")}
                                 </Button>
-                                : <Group wrap={"nowrap"} gap={5} justify={"end"} pr={"sm"}><IconLock size={12}/><Text
-                                    size={"sm"}>{t("docport.login_required")}</Text></Group>}</Table.Td>
+                                    <Button size={"xs"} color={"red"} variant={"outline"} hiddenFrom={"xs"}
+                                            onClick={() => window.open(transformFileUrl(file.url))}>
+                                        <IconDownload size={10}/>
+                                    </Button></>
+
+                                : <Group wrap={"nowrap"} gap={5} justify={"end"} pr={"sm"}>
+                                    {file?.name == "EXPIRED" ? (<><IconTrash size={12}/><Text size={"xs"}>{t("docport.file_expired")}</Text></>) :
+                                        <><IconLock size={12}/><Text size={"sm"}>{t("docport.login_required")}</Text></>
+                                    }
+                                    </Group>}</Table.Td>
                         </Table.Tr>
                     ))}
                 </Table.Tbody>

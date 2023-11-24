@@ -5,6 +5,7 @@ import {useEffect, useState} from "react";
 import Teleport from "./Teleport.tsx";
 import classes from "./Single.module.css";
 import {useTranslation} from "react-i18next";
+import {NoCaseProvided} from "./NoCaseProvided.tsx";
 
 export default function SingleLayout() {
 
@@ -69,7 +70,7 @@ export default function SingleLayout() {
             <Stack align={"center"}>
                 {loading ? <Loader color={"red"} size={"md"}/> :
                     (
-                        id === "undefined" || error ? <NotFound/> :
+                        id === "undefined" ? <NoCaseProvided/> : error ? <NotFound/> :
                             <Teleport data={docPort} setData={setDocPort} getDocPort={getDocPort}/>
                     )
                 }

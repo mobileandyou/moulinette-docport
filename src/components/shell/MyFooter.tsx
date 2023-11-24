@@ -24,17 +24,18 @@ export function MyFooter() {
     }
 
     const mapCurrentLanguageToValue = () => {
-        if (i18n.language === "fr") {
+        const langTwoChars = i18n.language?.split("-")[0];
+        if (langTwoChars === "fr") {
             return "Français";
-        } else if (i18n.language === "en") {
+        } else if (langTwoChars === "en") {
             return "English";
-        } else if (i18n.language === "de") {
+        } else if (langTwoChars === "de") {
             return "Deutsch";
-        } else if(i18n.language === "nl") {
+        } else if(langTwoChars === "nl") {
             return "Dutch";
-        } else if(i18n.language === "it") {
+        } else if(langTwoChars=== "it") {
             return "Italiano";
-        } else if(i18n.language === "es") {
+        } else if(langTwoChars === "es") {
             return "Español";
         }
     }
@@ -54,6 +55,7 @@ export function MyFooter() {
                     }}
                     placeholder="Pick language"
                     value={mapCurrentLanguageToValue()}
+                    defaultValue={mapCurrentLanguageToValue()}
                 /></Center>
                 <Text c="dimmed" size="sm">
                     © {new Date().getFullYear()} Astrepid — {t("footer.copy")}

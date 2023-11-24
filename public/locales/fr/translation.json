@@ -1,52 +1,52 @@
 {
   "banner": {
-    "safety_message": "Pour plus de sécurité dans l'envoi de vos documents, assurez-vous de naviguer sur le site officiel de DocPort "
+    "safety_message": "Pour une sécurité accrue lors de l'envoi de vos documents, assurez-vous de vous rendre sur le site officiel de DocPort."
   },
   "home": {
     "features": {
       "feature1": {
-        "title": "Performances",
-        "description": "En se basant uniquement sur des technologies modernes nous pouvons vous offrir des résultats optimaux"
+        "title": "Performance",
+        "description": "En ne comptant que sur des technologies modernes, nous pouvons vous offrir des résultats optimaux."
       },
       "feature2": {
-        "title": "Vie privée",
-        "description": "Seules les informations nécessaires sont collectées et les dossier sont supprimés après leur utilisation ou expiration"
+        "title": "Confidentialité",
+        "description": "Seules les informations nécessaires sont collectées, et les fichiers sont supprimés après leur utilisation ou expiration."
       },
       "feature3": {
-        "title": "Aucun intermédiaire",
-        "description": "Nous ne faisons appel à aucun intermédiaire, vous êtes en relation directe avec les technologies utilisées"
+        "title": "Pas d'intermédiaires",
+        "description": "Nous n'impliquons aucun intermédiaire ; vous êtes en contact direct avec les technologies utilisées."
       },
       "feature4": {
         "title": "Sécurité",
-        "description": "Cet enjeu est au coeur de nos préoccupations, nous mettons tout en oeuvre pour vous offrir un service sécurisé"
+        "description": "La sécurité est au cœur de nos préoccupations, et nous mettons tout en œuvre pour vous fournir un service sécurisé."
       },
       "feature5": {
         "title": "Support 24/7",
-        "description": "ous sommes à votre écoute pour répondre à vos questions et vous accompagner dans votre utilisation"
+        "description": "Nous sommes là pour écouter, répondre à vos questions et vous aider dans votre utilisation à toute heure."
       }
     },
     "faq": {
-      "title": "Questions fréquentes",
+      "title": "Questions fréquemment posées",
       "questions": {
         "q1": {
           "title": "À quoi sert DocPort ?",
-          "description": "Ce service permet de téléverser des documents dans un dossier partagé qui sera réutilisé par le service Moulinette. Cela facilite grandement par exemple la prise de photos et son transfert sur le poste fixe du technicien."
+          "description": "Ce service vous permet de télécharger des documents dans un dossier partagé qui sera réutilisé par le service Moulinette. Cela facilite notamment la prise de photos et leur transfert sur le poste de travail du technicien."
         },
         "q2": {
           "title": "Qui peut créer un dossier ?",
-          "description": "Seul un utilisateur autorisé de Moulinette est en capacité de créer un dossier."
+          "description": "Seul un utilisateur autorisé de Moulinette a la possibilité de créer un dossier."
         },
         "q3": {
-          "title": "Qui peut ajouter des documents dans un dossier ?",
+          "title": "Qui peut ajouter des documents à un dossier ?",
           "description": "Toute personne en possession du lien du dossier peut ajouter des documents."
         },
         "q4": {
-          "title": "Qui peut accéder aux documents d'un dossier ?",
-          "description": "Seul un utilisateur autorisé de Moulinette est en capacité de consulter les documents d'un dossier."
+          "title": "Qui peut accéder aux documents dans un dossier ?",
+          "description": "Seul un utilisateur autorisé de Moulinette a la possibilité de voir les documents dans un dossier."
         },
         "q5": {
           "title": "Quelles sont les limitations ?",
-          "description": "Les limites sont fixées par le créateur du DocPort en question."
+          "description": "Les limitations sont définies par le créateur du DocPort respectif."
         }
       }
     },
@@ -54,10 +54,10 @@
       "cta": {
         "demo": "Demander une démo"
       },
-      "title1": "Créez",
-      "title2": "téléportez",
+      "title1": "Créer",
+      "title2": "téléporter",
       "title3": "c'est fait",
-      "description": "Il était temps de créer un système de partage de fichiers qui fonctionne pour votre équipe et vos clients, facilement et en toute sécurité."
+      "description": "Il était temps de créer un système de partage de fichiers qui fonctionne pour votre équipe et vos clients de manière facile et sécurisée."
     }
   },
   "header": {
@@ -65,52 +65,59 @@
     "my_folder": "Mon dossier"
   },
   "general": {
-    "file": "fichier",
+    "file": "Fichier",
     "megabyte": "Mo",
     "download": "Télécharger",
-    "name": "Nom"
+    "name": "Nom",
+    "close": "Fermer"
   },
   "footer": {
     "copy": "Tous droits réservés"
   },
   "docport": {
-    "upload": {
-      "started": {
-        "title": "Téléportation en cours",
-        "description": "Vos fichiers sont en cours de traitement"
-      },
-      "success": {
-        "title": "Téléportation réussie",
-        "description": "Vos fichiers sont ajoutés à votre dossier"
-      }
+    "qrcode": {
+      "popover": "Vous pouvez cliquer ici et scanner le code QR pour envoyer des fichiers depuis votre téléphone vers ce dossier.",
+      "title": "Code QR",
+      "description": "Scannez ce code QR avec l'application appareil photo de votre téléphone, Snapchat ou tout autre lecteur de code QR pour envoyer des fichiers à ce dossier."
     },
+    "file_not_previewable": "Ce fichier n'est pas disponible pour l'aperçu",
     "unknown": {
       "title": "Dossier inconnu",
       "description": "Le dossier DocPort que vous essayez d'atteindre n'existe pas, a été utilisé ou a expiré. Veuillez vérifier l'URL ou contacter le propriétaire du dossier."
     },
-    "qrcode": {
-      "popover": "Vous pouvez cliquer ici pour afficher un QR code afin d'ajouter des fichiers depuis votre téléphone",
-      "title": "QR Code",
-      "description": "Scannez ce QR code depuis votre application de caméra, Snapchat ou tout autre scanner de QR code pour envoyer des fichiers dans ce dossier."
+    "no_case": {
+      "title": "Accéder à mon dossier",
+      "description": "Veuillez entrer le numéro d'identification du cas ci-dessous pour accéder à votre dossier."
     },
-    "file_not_previewable": "Ce fichier n'est pas prévisualisable",
+    "upload": {
+      "started": {
+        "title": "Téléportation en cours",
+        "description": "Vos fichiers sont en cours de téléchargement dans votre dossier"
+      },
+      "success": {
+        "title": "Téléportation terminée",
+        "description": "Vos fichiers ont été téléchargés avec succès dans votre dossier"
+      }
+    },
     "title": "Téléportation",
-    "description": "Cette page vous permet de transmettre des documents de manière sécurisée à",
-    "default_requester": "l'entité qui vous les demande",
-    "login_required": "Connexion nécessaire",
+    "description": "Cette page vous permet de télécharger en toute sécurité n'importe quel document que vous souhaitez sur",
+    "default_requester": "l'entité demandante",
+    "login_required": "Connexion requise",
+    "file_expired": "Fichier expiré",
     "no_file": "Aucun fichier",
     "files": {
       "label": "Vos fichiers",
-      "placeholder": "Séléctionnez vos fichiers",
+      "placeholder": "Sélectionnez vos fichiers",
+      "placeholder_long": "Sélectionnez vos fichiers ou faites-les glisser ici",
       "submit": "Envoyer"
     },
     "disclaimer": {
       "part_1": "Ce dossier est limité à",
       "part_2": "et",
       "part_3": "par fichier",
-      "part_4": "Seuls les fichiers de types",
-      "part_5": "sont autorisés",
-      "part_6": "Les fichiers seront conservés jusqu'au",
+      "part_4": "Seuls les types",
+      "part_5": "sont acceptés",
+      "part_6": "Les fichiers seront disponibles jusqu'à",
       "part_7": "En envoyant vos fichiers, vous acceptez les conditions d'utilisation de DocPort"
     },
     "files_already_imported": "Fichiers déjà importés",
@@ -123,32 +130,32 @@
     "error": {
       "not_found": {
         "title": "DocPort inconnu",
-        "description": "Le dossier que vous essayez d'atteindre n'existe pas, a été utilisé ou a expiré."
+        "description": "Le dossier DocPort que vous essayez d'atteindre n'existe pas, a été utilisé ou a expiré."
       },
       "generic": {
         "title": "Erreur",
-        "description": "Une erreur est survenue, veuillez réessayer plus tard."
+        "description": "Une erreur s'est produite, veuillez réessayer ultérieurement."
       },
       "unreachable": {
         "title": "Erreur",
-        "description": "Le service DocPort est actuellement indisponible, veuillez réessayer plus tard."
+        "description": "Le serveur est occupé, veuillez réessayer ultérieurement."
       },
       "upload": {
         "too_many_files": {
           "title": "Trop de fichiers",
-          "description": "Vous ne pouvez pas envoyer plus de {} fichiers."
+          "description": "Vous ne pouvez pas télécharger plus de {} fichiers."
         },
         "file_too_large": {
           "title": "Fichier trop volumineux",
-          "description": "Un fichier est trop volumineux. La taille maximale est de {} Mo."
+          "description": "Un de vos fichiers est trop volumineux. La taille maximale est de {} Mo."
         },
         "file_type_not_allowed": {
           "title": "Type de fichier non autorisé",
-          "description": "Le type {} n'est pas autorisé."
+          "description": "Le type de fichier {} n'est pas autorisé."
         },
         "size_limit_reached": {
           "title": "Limite de taille atteinte",
-          "description": "La taille maximale de ce dossier est de {} Mo."
+          "description": "La taille maximale de {} Mo a été atteinte."
         }
       }
     }

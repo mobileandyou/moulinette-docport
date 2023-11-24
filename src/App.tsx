@@ -8,6 +8,7 @@ import {MyHeader} from "./components/shell/MyHeader.tsx";
 import {MyFooter} from "./components/shell/MyFooter.tsx";
 import {useTranslation} from "react-i18next";
 import {ModalsProvider} from "@mantine/modals";
+import '@mantine/dropzone/styles.css';
 
 export default function App() {
     const {id} = useParams();

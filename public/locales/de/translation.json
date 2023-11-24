@@ -1,12 +1,12 @@
 {
   "banner": {
-    "safety_message": "Für mehr Sicherheit beim Versenden Ihrer Dokumente sollten Sie sicherstellen, dass Sie zur offiziellen DocPort-Website navigieren."
+    "safety_message": "Für mehr Sicherheit beim Versenden Ihrer Dokumente, stellen Sie sicher, dass Sie zur offiziellen DocPort-Website navigieren."
   },
   "home": {
     "features": {
       "feature1": {
         "title": "Leistung",
-        "description": "Durch den ausschließlichen Einsatz moderner Technologien können wir optimale Ergebnisse für Sie erzielen."
+        "description": "Durch den ausschließlichen Einsatz modernster Technologien können wir Ihnen optimale Ergebnisse bieten."
       },
       "feature2": {
         "title": "Datenschutz",
@@ -14,7 +14,7 @@
       },
       "feature3": {
         "title": "Keine Vermittler",
-        "description": "Es werden keine Vermittler eingeschaltet. Sie stehen direkt im Kontakt mit den verwendeten Technologien."
+        "description": "Wir involvieren keine Vermittler; Sie stehen in direktem Kontakt mit den verwendeten Technologien."
       },
       "feature4": {
         "title": "Sicherheit",
@@ -30,11 +30,11 @@
       "questions": {
         "q1": {
           "title": "Wofür wird DocPort verwendet?",
-          "description": "Dieser Service ermöglicht es Ihnen, Dokumente in einen freigegebenen Ordner hochzuladen, der vom Moulinette-Dienst wiederverwendet wird. Dies erleichtert beispielsweise das Fotografieren und Übertragen auf die Arbeitsstation des Technikers."
+          "description": "Dieser Service ermöglicht es Ihnen, Dokumente in einen gemeinsamen Ordner hochzuladen, der vom Moulinette-Dienst wiederverwendet wird. Dies erleichtert beispielsweise das Fotografieren und Übertragen auf den Arbeitsplatz des Technikers."
         },
         "q2": {
           "title": "Wer kann einen Ordner erstellen?",
-          "description": "Nur ein autorisierter Moulinette-Benutzer hat die Befugnis, einen Ordner zu erstellen."
+          "description": "Nur ein autorisierter Moulinette-Benutzer hat die Möglichkeit, einen Ordner zu erstellen."
         },
         "q3": {
           "title": "Wer kann Dokumente zu einem Ordner hinzufügen?",
@@ -42,11 +42,11 @@
         },
         "q4": {
           "title": "Wer kann auf die Dokumente in einem Ordner zugreifen?",
-          "description": "Nur ein autorisierter Moulinette-Benutzer hat die Befugnis, die Dokumente in einem Ordner anzuzeigen."
+          "description": "Nur ein autorisierter Moulinette-Benutzer hat die Möglichkeit, die Dokumente in einem Ordner anzusehen."
         },
         "q5": {
           "title": "Was sind die Einschränkungen?",
-          "description": "Die Einschränkungen werden vom Ersteller des jeweiligen DocPorts festgelegt."
+          "description": "Die Einschränkungen werden vom Ersteller des jeweiligen DocPort festgelegt."
         }
       }
     },
@@ -68,40 +68,47 @@
     "file": "Datei",
     "megabyte": "MB",
     "download": "Herunterladen",
-    "name": "Name"
+    "name": "Name",
+    "close": "Schließen"
   },
   "footer": {
     "copy": "Alle Rechte vorbehalten"
   },
   "docport": {
     "qrcode": {
-      "popover": "Sie können hier klicken und den QR-Code scannen, um Dateien von Ihrem Telefon zu diesem Ordner zu senden.",
+      "popover": "Sie können hier klicken und den QR-Code scannen, um Dateien von Ihrem Telefon in diesen Ordner zu senden.",
       "title": "QR-Code",
-      "description": "Scannen Sie diesen QR-Code mit Ihrer Telefonkamera, Snapchat oder einem anderen QR-Code-Scanner, um Dateien zu diesem Ordner zu senden."
+      "description": "Scannen Sie diesen QR-Code mit Ihrer Telefonkamera, Snapchat oder einem anderen QR-Code-Scanner, um Dateien in diesen Ordner zu senden."
     },
     "file_not_previewable": "Diese Datei kann nicht vorab angezeigt werden",
     "unknown": {
       "title": "Unbekannter Ordner",
-      "description": "Der DocPort-Ordner, den Sie erreichen möchten, existiert nicht, wurde verwendet oder ist abgelaufen. Bitte überprüfen Sie die URL oder kontaktieren Sie den Ordnerbesitzer."
+      "description": "Der DocPort-Ordner, den Sie zu erreichen versuchen, existiert nicht, wurde verwendet oder ist abgelaufen. Überprüfen Sie bitte die URL oder kontaktieren Sie den Ordnerbesitzer."
+    },
+    "no_case": {
+      "title": "Auf meinen Ordner zugreifen",
+      "description": "Geben Sie bitte die Fallidentifikationsnummer unten ein, um auf Ihren Ordner zuzugreifen."
     },
     "upload": {
       "started": {
-        "title": "Teleportation läuft",
+        "title": "Teleportation im Gange",
         "description": "Ihre Dateien werden zu Ihrem Ordner hochgeladen"
       },
       "success": {
         "title": "Teleportation abgeschlossen",
-        "description": "Ihre Dateien wurden erfolgreich zu Ihrem Ordner hochgeladen"
+        "description": "Ihre Dateien wurden erfolgreich in Ihren Ordner hochgeladen"
       }
     },
     "title": "Teleportation",
-    "description": "Diese Seite ermöglicht es Ihnen, jedes gewünschte Dokument sicher hochzuladen zu",
-    "default_requester": "die anfragende Stelle",
+    "description": "Diese Seite ermöglicht es Ihnen, jedes gewünschte Dokument sicher hochzuladen",
+    "default_requester": "die anfragende Einheit",
     "login_required": "Anmeldung erforderlich",
+    "file_expired": "Datei abgelaufen",
     "no_file": "Keine Datei",
     "files": {
       "label": "Ihre Dateien",
       "placeholder": "Wählen Sie Ihre Dateien aus",
+      "placeholder_long": "Wählen Sie Ihre Dateien aus oder ziehen Sie sie hierher",
       "submit": "Senden"
     },
     "disclaimer": {
@@ -110,8 +117,8 @@
       "part_3": "pro Datei begrenzt",
       "part_4": "Es werden nur die Typen",
       "part_5": "akzeptiert",
-      "part_6": "Die Dateien sind verfügbar bis",
-      "part_7": "Durch das Senden Ihrer Dateien stimmen Sie den Nutzungsbedingungen von DocPort zu"
+      "part_6": "Die Dateien sind bis",
+      "part_7": "verfügbar. Durch das Senden Ihrer Dateien stimmen Sie den Nutzungsbedingungen von DocPort zu"
     },
     "files_already_imported": "Bereits importierte Dateien",
     "success": {
@@ -123,15 +130,21 @@
     "error": {
       "not_found": {
         "title": "DocPort unbekannt",
-        "description": "Der DocPort-Ordner, den Sie erreichen möchten, existiert nicht, wurde verwendet oder ist abgelaufen."
+        "description": "Der DocPort-Ordner, den Sie zu erreichen versuchen, existiert nicht, wurde verwendet oder ist abgelaufen."
       },
       "generic": {
         "title": "Fehler",
-        "description": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut."
+        "description": "Es ist ein Fehler aufgetreten, bitte versuchen
+
+        Sie
+        es
+        später
+        erneut.
+        "
       },
       "unreachable": {
         "title": "Fehler",
-        "description": "Der Server ist ausgelastet. Bitte versuchen Sie es später erneut."
+        "description": "Der Server ist ausgelastet, bitte versuchen Sie es später erneut."
       },
       "upload": {
         "too_many_files": {
@@ -147,8 +160,8 @@
           "description": "Der Dateityp {} ist nicht erlaubt."
         },
         "size_limit_reached": {
-          "title": "Größenlimit erreicht",
-          "description": "Das maximale Größenlimit von {} MB wurde erreicht."
+          "title": "Größenbegrenzung erreicht",
+          "description": "Die maximale Größe von {} MB wurde erreicht."
         }
       }
     }

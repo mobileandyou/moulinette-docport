@@ -1,36 +1,36 @@
 {
   "banner": {
-    "safety_message": "Para una mayor seguridad al enviar sus documentos, asegúrese de navegar al sitio web oficial de DocPort."
+    "safety_message": "Para una mayor seguridad al enviar tus documentos, asegúrate de navegar al sitio web oficial de DocPort."
   },
   "home": {
     "features": {
       "feature1": {
         "title": "Rendimiento",
-        "description": "Al depender únicamente de tecnologías modernas, podemos ofrecerle resultados óptimos."
+        "description": "Al depender únicamente de tecnologías modernas, podemos ofrecerte resultados óptimos."
       },
       "feature2": {
         "title": "Privacidad",
         "description": "Solo se recopila la información necesaria y los archivos se eliminan después de su uso o vencimiento."
       },
       "feature3": {
-        "title": "Sin Intermediarios",
-        "description": "No involucramos intermediarios; usted está en contacto directo con las tecnologías utilizadas."
+        "title": "Sin intermediarios",
+        "description": "No involucramos intermediarios; estás en contacto directo con las tecnologías utilizadas."
       },
       "feature4": {
         "title": "Seguridad",
-        "description": "La seguridad es fundamental en nuestras preocupaciones, y hacemos todo lo posible para proporcionarle un servicio seguro."
+        "description": "La seguridad es fundamental en nuestras preocupaciones, y hacemos todo lo posible para ofrecerte un servicio seguro."
       },
       "feature5": {
         "title": "Soporte 24/7",
-        "description": "Estamos aquí para escuchar, responder sus preguntas y ayudarlo con su uso las 24 horas del día, los 7 días de la semana."
+        "description": "Estamos aquí para escuchar, responder tus preguntas y ayudarte con tu uso en todo momento."
       }
     },
     "faq": {
-      "title": "Preguntas Frecuentes",
+      "title": "Preguntas frecuentes",
       "questions": {
         "q1": {
           "title": "¿Para qué se utiliza DocPort?",
-          "description": "Este servicio le permite cargar documentos en una carpeta compartida que será reutilizada por el servicio Moulinette. Esto facilita, por ejemplo, tomar fotos y transferirlas al lugar de trabajo del técnico."
+          "description": "Este servicio te permite cargar documentos en una carpeta compartida que será reutilizada por el servicio Moulinette. Esto facilita, por ejemplo, tomar fotos y transferirlas al lugar de trabajo del técnico."
         },
         "q2": {
           "title": "¿Quién puede crear una carpeta?",
@@ -38,7 +38,7 @@
         },
         "q3": {
           "title": "¿Quién puede agregar documentos a una carpeta?",
-          "description": "Cualquiera que tenga el enlace de la carpeta puede agregar documentos."
+          "description": "Cualquier persona en posesión del enlace de la carpeta puede agregar documentos."
         },
         "q4": {
           "title": "¿Quién puede acceder a los documentos en una carpeta?",
@@ -57,7 +57,7 @@
       "title1": "Crear",
       "title2": "teletransportar",
       "title3": "listo",
-      "description": "Era el momento de crear un sistema de intercambio de archivos que funcione para su equipo y sus clientes, de manera fácil y segura."
+      "description": "Era el momento de crear un sistema de intercambio de archivos que funcione para tu equipo y tus clientes de manera fácil y segura."
     }
   },
   "header": {
@@ -65,57 +65,63 @@
     "my_folder": "Mi carpeta"
   },
   "general": {
-    "file": "archivo",
+    "file": "Archivo",
     "megabyte": "MB",
     "download": "Descargar",
-    "name": "Nombre"
+    "name": "Nombre",
+    "close": "Cerrar"
   },
   "footer": {
     "copy": "Todos los derechos reservados"
   },
   "docport": {
     "qrcode": {
-      "popover": "Puede hacer clic aquí y escanear el código QR para enviar archivos desde su teléfono a esta carpeta.",
+      "popover": "Puedes hacer clic aquí y escanear el código QR para enviar archivos desde tu teléfono a esta carpeta.",
       "title": "Código QR",
-      "description": "Escanee este código QR con la cámara de su teléfono, Snapchat o cualquier otro escáner de códigos QR para enviar archivos a esta carpeta."
+      "description": "Escanéa este código QR desde la aplicación de la cámara de tu teléfono, Snapchat o cualquier otro escáner de códigos QR para enviar archivos a esta carpeta."
     },
     "file_not_previewable": "Este archivo no está disponible para vista previa",
     "unknown": {
       "title": "Carpeta desconocida",
-      "description": "La carpeta de DocPort a la que está intentando acceder no existe, se ha utilizado o ha caducado. Verifique la URL o comuníquese con el propietario de la carpeta."
+      "description": "La carpeta de DocPort a la que estás intentando acceder no existe, ha sido utilizada o ha caducado. Por favor, verifica la URL o contacta al propietario de la carpeta."
+    },
+    "no_case": {
+      "title": "Acceder a mi carpeta",
+      "description": "Ingresa el número de identificación del caso a continuación para acceder a tu carpeta."
     },
     "upload": {
       "started": {
         "title": "Teletransportación en progreso",
-        "description": "Sus archivos se están cargando en su carpeta."
+        "description": "Tus archivos se están cargando en tu carpeta"
       },
       "success": {
         "title": "Teletransportación completada",
-        "description": "Sus archivos se han cargado correctamente en su carpeta."
+        "description": "Tus archivos se han cargado correctamente en tu carpeta"
       }
     },
     "title": "Teletransportación",
-    "description": "Esta página le permite cargar cualquier documento que desee de manera segura en",
+    "description": "Esta página te permite cargar cualquier documento que desees de manera segura a",
     "default_requester": "la entidad solicitante",
     "login_required": "Inicio de sesión requerido",
+    "file_expired": "Archivo caducado",
     "no_file": "Sin archivo",
     "files": {
-      "label": "Sus archivos",
-      "placeholder": "Seleccione sus archivos",
+      "label": "Tus archivos",
+      "placeholder": "Selecciona tus archivos",
+      "placeholder_long": "Selecciona tus archivos o arrástralos aquí",
       "submit": "Enviar"
     },
     "disclaimer": {
       "part_1": "Esta carpeta está limitada a",
       "part_2": "y",
       "part_3": "por archivo",
-      "part_4": "Solo los tipos",
-      "part_5": "están permitidos",
-      "part_6": "Los archivos estarán disponibles hasta",
-      "part_7": "Al enviar sus archivos, acepta los términos de uso de DocPort"
+      "part_4": "Solo se aceptan los tipos",
+      "part_5": "Los archivos estarán disponibles hasta",
+      "part_6": "Al enviar tus archivos, aceptas los términos de uso de DocPort"
     },
     "files_already_imported": "Archivos ya importados",
     "success": {
-      "message": "Sus archivos se han enviado correctamente",
+      "message": "Tus archivos se han enviado con éxito",
       "title": "Éxito"
     }
   },
@@ -123,24 +129,24 @@
     "error": {
       "not_found": {
         "title": "DocPort desconocido",
-        "description": "La carpeta de DocPort a la que está intentando acceder no existe, se ha utilizado o ha caducado."
+        "description": "La carpeta de DocPort a la que estás intentando acceder no existe, ha sido utilizada o ha caducado."
       },
       "generic": {
         "title": "Error",
-        "description": "Se ha producido un error, inténtelo nuevamente más tarde."
+        "description": "Se ha producido un error, por favor, inténtalo de nuevo más tarde."
       },
       "unreachable": {
         "title": "Error",
-        "description": "El servidor está ocupado, inténtelo nuevamente más tarde."
+        "description": "El servidor está ocupado, por favor, inténtalo de nuevo más tarde."
       },
       "upload": {
         "too_many_files": {
           "title": "Demasiados archivos",
-          "description": "No puede cargar más de {} archivos."
+          "description": "No puedes cargar más de {} archivos."
         },
         "file_too_large": {
           "title": "Archivo demasiado grande",
-          "description": "Uno de sus archivos es demasiado grande. El tamaño máximo es de {} MB."
+          "description": "Uno de tus archivos es demasiado grande. El tamaño máximo es de {} MB."
         },
         "file_type_not_allowed": {
           "title": "Tipo de archivo no permitido",

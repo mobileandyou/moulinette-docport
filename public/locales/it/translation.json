@@ -1,28 +1,28 @@
 {
   "banner": {
-    "safety_message": "Per una maggiore sicurezza nell'invio dei tuoi documenti, assicurati di navigare sul sito ufficiale di DocPort"
+    "safety_message": "Per una maggiore sicurezza nell'invio dei tuoi documenti, assicurati di navigare sul sito ufficiale di DocPort."
   },
   "home": {
     "features": {
       "feature1": {
-        "title": "Prestazioni",
-        "description": "Relying solely on modern technologies, we can offer you optimal results."
+        "title": "Performance",
+        "description": "Affidandoci esclusivamente alle tecnologie moderne, possiamo offrirti risultati ottimali."
       },
       "feature2": {
         "title": "Privacy",
-        "description": "Vengono raccolte solo le informazioni necessarie e i file vengono eliminati dopo il loro utilizzo o scadenza."
+        "description": "Vengono raccolte solo le informazioni necessarie, e i file vengono eliminati dopo il loro utilizzo o scadenza."
       },
       "feature3": {
-        "title": "Nessun Intermediario",
+        "title": "Nessun intermediario",
         "description": "Non coinvolgiamo intermediari; sei in contatto diretto con le tecnologie utilizzate."
       },
       "feature4": {
         "title": "Sicurezza",
-        "description": "La sicurezza è al centro delle nostre preoccupazioni e facciamo ogni sforzo per fornirti un servizio sicuro."
+        "description": "La sicurezza è al centro delle nostre preoccupazioni, e facciamo ogni sforzo per fornirti un servizio sicuro."
       },
       "feature5": {
         "title": "Supporto 24/7",
-        "description": "Siamo qui per ascoltare, rispondere alle tue domande e assisterti nell'uso in qualsiasi momento del giorno e della notte."
+        "description": "Siamo qui per ascoltare, rispondere alle tue domande e assisterti nell'uso in qualsiasi momento."
       }
     },
     "faq": {
@@ -30,19 +30,19 @@
       "questions": {
         "q1": {
           "title": "A cosa serve DocPort?",
-          "description": "Questo servizio ti consente di caricare documenti in una cartella condivisa che verrà riutilizzata dal servizio Moulinette. Ciò facilita notevolmente, ad esempio, la fotografia e il trasferimento al computer del tecnico."
+          "description": "Questo servizio consente di caricare documenti in una cartella condivisa che verrà riutilizzata dal servizio Moulinette. Ciò facilita notevolmente, ad esempio, la fotografia e il trasferimento al computer del tecnico."
         },
         "q2": {
           "title": "Chi può creare una cartella?",
-          "description": "Solo un utente autorizzato di Moulinette ha la capacità di creare una cartella."
+          "description": "Solo un utente Moulinette autorizzato ha la capacità di creare una cartella."
         },
         "q3": {
           "title": "Chi può aggiungere documenti a una cartella?",
-          "description": "Chiunque sia in possesso del link della cartella può aggiungere documenti."
+          "description": "Chiunque abbia il link della cartella può aggiungere documenti."
         },
         "q4": {
           "title": "Chi può accedere ai documenti in una cartella?",
-          "description": "Solo un utente autorizzato di Moulinette ha la capacità di visualizzare i documenti in una cartella."
+          "description": "Solo un utente Moulinette autorizzato ha la capacità di visualizzare i documenti in una cartella."
         },
         "q5": {
           "title": "Quali sono le limitazioni?",
@@ -55,9 +55,9 @@
         "demo": "Richiedi una demo"
       },
       "title1": "Crea",
-      "title2": "teletrasporto",
+      "title2": "teletrasporta",
       "title3": "è fatto",
-      "description": "Era ora di creare un sistema di condivisione file che funzioni per il tuo team e i tuoi clienti, in modo facile e sicuro."
+      "description": "Era ora di creare un sistema di condivisione file che funzioni per il tuo team e i tuoi clienti in modo facile e sicuro."
     }
   },
   "header": {
@@ -65,29 +65,34 @@
     "my_folder": "La mia cartella"
   },
   "general": {
-    "file": "file",
+    "file": "File",
     "megabyte": "MB",
     "download": "Scarica",
-    "name": "Nome"
+    "name": "Nome",
+    "close": "Chiudi"
   },
   "footer": {
     "copy": "Tutti i diritti riservati"
   },
   "docport": {
     "qrcode": {
-      "popover": "Puoi fare clic qui e scannerizzare il codice QR per inviare file dal tuo telefono a questa cartella.",
+      "popover": "Puoi cliccare qui e scannerizzare il codice QR per inviare file dal tuo telefono a questa cartella.",
       "title": "Codice QR",
       "description": "Scannerizza questo codice QR dalla fotocamera del tuo telefono, Snapchat o qualsiasi altro lettore di codici QR per inviare file a questa cartella."
     },
     "file_not_previewable": "Questo file non è disponibile per l'anteprima",
     "unknown": {
       "title": "Cartella sconosciuta",
-      "description": "La cartella DocPort a cui stai cercando di accedere non esiste, è stata utilizzata o è scaduta. Controlla l'URL o contatta il proprietario della cartella."
+      "description": "La cartella DocPort a cui stai cercando di accedere non esiste, è stata utilizzata o è scaduta. Verifica l'URL o contatta il proprietario della cartella."
+    },
+    "no_case": {
+      "title": "Accedi alla mia cartella",
+      "description": "Inserisci il numero di identificazione del caso di seguito per accedere alla tua cartella."
     },
     "upload": {
       "started": {
         "title": "Teletrasporto in corso",
-        "description": "I tuoi file stanno per essere caricati nella tua cartella"
+        "description": "I tuoi file vengono caricati nella tua cartella"
       },
       "success": {
         "title": "Teletrasporto completato",
@@ -95,13 +100,15 @@
       }
     },
     "title": "Teletrasporto",
-    "description": "Questa pagina ti permette di caricare qualsiasi documento desiderato in modo sicuro su",
+    "description": "Questa pagina ti consente di caricare qualsiasi documento desiderato in modo sicuro su",
     "default_requester": "l'entità richiedente",
     "login_required": "Accesso obbligatorio",
+    "file_expired": "File scaduto",
     "no_file": "Nessun file",
     "files": {
       "label": "I tuoi file",
       "placeholder": "Seleziona i tuoi file",
+      "placeholder_long": "Seleziona i tuoi file o trascinali qui",
       "submit": "Invia"
     },
     "disclaimer": {
@@ -139,7 +146,7 @@
         },
         "file_too_large": {
           "title": "File troppo grande",
-          "description": "Uno dei tuoi file è troppo grande. La dimensione massima è di {} MB."
+          "description": "Uno dei tuoi file è troppo grande. La dimensione massima è {} MB."
         },
         "file_type_not_allowed": {
           "title": "Tipo di file non consentito",

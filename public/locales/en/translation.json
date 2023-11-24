@@ -68,7 +68,8 @@
     "file": "file",
     "megabyte": "MB",
     "download": "Download",
-    "name": "Name"
+    "name": "Name",
+    "close": "Close"
   },
   "footer": {
     "copy": "All rights reserved"
@@ -84,6 +85,10 @@
       "title": "Unknown folder",
       "description": "The DocPort folder you are trying to reach does not exist, has been used or has expired. Please check the URL or contact the folder owner."
     },
+    "no_case": {
+      "title": "Access my folder",
+      "description": "Please enter the case identification number below to access your folder."
+    },
     "upload": {
       "started": {
         "title": "Téleportation in progress",
@@ -98,10 +103,12 @@
     "description": "This page lets you upload any document you would like in a secure way to",
     "default_requester": "the requesting entity",
     "login_required": "Login required",
+    "file_expired": "File expired",
     "no_file": "No file",
     "files": {
       "label": "Your files",
       "placeholder": "Select your files",
+      "placeholder_long": "Select your files or drag and drop them here",
       "submit": "Send"
     },
     "disclaimer": {
