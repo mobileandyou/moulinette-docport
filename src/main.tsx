@@ -13,9 +13,9 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
       <BrowserRouter>
           <Routes>
               <Route path={"/"} element={<App/>}>
-                  <Route path={"/"} element={<Home/>}/>
-                  <Route path={"/:id"} element={<SingleLayout/>}/>
-                  <Route path={"/logout"} element={<Logout/>}/>
+                  <Route path="" element={<Home/>}/>
+                  <Route path="/:id" element={<SingleLayout/>}/>
+                  <Route path="/logout" element={<Logout/>}/>
               </Route>
           </Routes>
       </BrowserRouter>

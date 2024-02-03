@@ -1,4 +1,4 @@
-import {useParams} from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 import {Container, Loader, Stack, Text} from "@mantine/core";
 import {NotFound} from "./NotFound";
 import {useEffect, useState} from "react";
@@ -15,6 +15,7 @@ export default function SingleLayout() {
     const [loading, setLoading] = useState(true);
     const {t} = useTranslation();
     const [realId, setRealId] = useState<string | undefined>(id);
+    const navigate = useNavigate();
 
     async function getDocPort(silent?: boolean) {
         if (!silent) setLoading(true);
@@ -35,6 +36,8 @@ export default function SingleLayout() {
                         setError(data.message);
                     }
                 } else {
+                    // edit id in url
+                    setRealId(data.id);
                     setDocPort(data);
                 }
                 setLoading(false);
@@ -48,6 +51,8 @@ export default function SingleLayout() {
     useEffect(() => {
         setError(undefined);
         getDocPort();
+        // replace id in url
+        navigate("/" + realId, {replace: true})
 
         // every 5 seconds
         const interval = setInterval(() => {
